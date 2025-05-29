@@ -6,11 +6,30 @@ import { Menu, X } from 'lucide-react';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('accueil');
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      
+      // Détection de la section active
+      const sections = ['accueil', 'apropos', 'services', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const offsetTop = element.offsetTop;
+          const offsetBottom = offsetTop + element.offsetHeight;
+          
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -24,10 +43,10 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'accueil', label: 'Accueil' },
-    { id: 'apropos', label: 'À propos' },
-    { id: 'services', label: 'Services' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'accueil', label: 'Accueil', size: 'text-sm' },
+    { id: 'apropos', label: 'À propos', size: 'text-base' },
+    { id: 'services', label: 'Services', size: 'text-lg' },
+    { id: 'contact', label: 'Contact', size: 'text-xl font-bold' }
   ];
 
   return (
@@ -52,14 +71,18 @@ const Navigation = () => {
             </span>
           </div>
           
-          {/* Desktop Menu */}
+          {/* Desktop Menu avec tailles progressives */}
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
               <Button 
                 key={item.id}
                 variant="ghost" 
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-holistik-primary hover:bg-holistik-light/50 px-6 py-2 rounded-lg transition-all duration-300 font-medium"
+                className={`${item.size} ${
+                  activeSection === item.id 
+                    ? 'text-holistik-primary bg-holistik-light/50' 
+                    : 'text-gray-700 hover:text-holistik-primary'
+                } hover:bg-holistik-light/50 px-6 py-2 rounded-lg transition-all duration-300`}
               >
                 {item.label}
               </Button>
@@ -98,7 +121,11 @@ const Navigation = () => {
                   key={item.id}
                   variant="ghost" 
                   onClick={() => scrollToSection(item.id)}
-                  className="text-gray-700 hover:text-holistik-primary hover:bg-holistik-light/50 justify-start rounded-lg font-medium"
+                  className={`${item.size} ${
+                    activeSection === item.id 
+                      ? 'text-holistik-primary bg-holistik-light/50' 
+                      : 'text-gray-700 hover:text-holistik-primary'
+                  } hover:bg-holistik-light/50 justify-start rounded-lg`}
                 >
                   {item.label}
                 </Button>

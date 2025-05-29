@@ -39,7 +39,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="animate-fade-in">
-            {/* Logo principal avec effet spectaculaire */}
+            {/* Logo principal qui tourne sur lui-même */}
             <div className="flex justify-center mb-16">
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-holistik-primary/20 to-transparent rounded-full blur-xl group-hover:blur-2xl transition-all duration-500" />
@@ -47,19 +47,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
                   <img 
                     src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
                     alt="Holistik Consulting" 
-                    className="h-24 w-24" 
+                    className="h-24 w-24 animate-spin" 
+                    style={{ animationDuration: '8s' }}
                   />
-                </div>
-                
-                {/* Éléments orbitaux créatifs */}
-                <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
-                  <Sparkles className="h-6 w-6 text-holistik-primary absolute -top-8 left-1/2 transform -translate-x-1/2" />
-                </div>
-                <div className="absolute inset-0 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}>
-                  <TrendingUp className="h-6 w-6 text-holistik-primary absolute -bottom-8 left-1/2 transform -translate-x-1/2" />
-                </div>
-                <div className="absolute inset-0 animate-spin" style={{ animationDuration: '15s' }}>
-                  <Target className="h-6 w-6 text-holistik-primary absolute top-1/2 -right-8 transform -translate-y-1/2" />
                 </div>
               </div>
             </div>
