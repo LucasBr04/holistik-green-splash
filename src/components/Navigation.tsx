@@ -1,7 +1,7 @@
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Dna, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,7 +72,6 @@ const Navigation = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-holistik-primary hover:bg-holistik-secondary text-white rounded-lg px-6 py-2 shadow-premium hover:shadow-hover transform hover:scale-105 transition-all duration-300 font-medium"
             >
-              <Dna className="mr-2 h-4 w-4" />
               Démarrer
             </Button>
           </div>
@@ -108,7 +107,6 @@ const Navigation = () => {
                 onClick={() => scrollToSection('contact')}
                 className="bg-holistik-primary hover:bg-holistik-secondary text-white rounded-lg mt-4 font-medium"
               >
-                <Dna className="mr-2 h-4 w-4" />
                 Démarrer
               </Button>
             </div>
