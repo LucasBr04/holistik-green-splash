@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -11,7 +12,7 @@ interface LanguageContextType {
 const translations = {
   fr: {
     nav: {
-      industry: 'expertise industry',
+      industry: 'expertise sectorielle',
       services: 'business services',
       about: 'à propos',
       blog: 'blog',
