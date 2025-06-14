@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -15,8 +14,8 @@ const translations = {
       industry: 'industry expertise',
       services: 'business services',
       about: 'about',
-      contact: 'contact',
-      start: 'commencer'
+      blog: 'blog',
+      talk: 'parlons-nous'
     },
     hero: {
       title: {
@@ -154,8 +153,8 @@ const translations = {
       industry: 'industry expertise',
       services: 'business services', 
       about: 'about',
-      contact: 'contact',
-      start: 'get started'
+      blog: 'blog',
+      talk: 'let\'s talk'
     },
     hero: {
       title: {

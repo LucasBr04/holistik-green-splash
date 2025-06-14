@@ -16,7 +16,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Détection de la section active
-      const sections = ['accueil', 'expertise', 'services', 'apropos', 'contact'];
+      const sections = ['accueil', 'expertise', 'services', 'apropos'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -45,11 +45,16 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleBlogClick = () => {
+    window.open('https://www.linkedin.com/company/105869544/admin/page-posts/published/', '_blank');
+    setIsMobileMenuOpen(false);
+  };
+
   const menuItems = [
     { id: 'expertise', label: t('nav.industry') },
     { id: 'services', label: t('nav.services') },
     { id: 'apropos', label: t('nav.about') },
-    { id: 'contact', label: t('nav.contact') }
+    { id: 'blog', label: t('nav.blog'), onClick: handleBlogClick }
   ];
 
   return (
@@ -80,7 +85,7 @@ const Navigation = () => {
               <Button 
                 key={item.id}
                 variant="ghost" 
-                onClick={() => scrollToSection(item.id)}
+                onClick={item.onClick || (() => scrollToSection(item.id))}
                 className={`text-sm lg:text-base font-montserrat lowercase ${
                   activeSection === item.id 
                     ? 'text-holistik-primary' 
@@ -99,7 +104,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-holistik-primary hover:bg-gray-900 text-white px-6 lg:px-8 py-2 lg:py-3 text-sm font-montserrat font-medium tracking-wide transition-all duration-300 border-0 lowercase"
             >
-              {t('nav.start')}
+              {t('nav.talk')}
             </Button>
           </div>
 
@@ -124,7 +129,7 @@ const Navigation = () => {
                 <Button 
                   key={item.id}
                   variant="ghost" 
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={item.onClick || (() => scrollToSection(item.id))}
                   className={`text-base sm:text-lg font-montserrat lowercase ${
                     activeSection === item.id 
                       ? 'text-holistik-primary' 
@@ -140,7 +145,7 @@ const Navigation = () => {
                   onClick={() => scrollToSection('contact')}
                   className="bg-holistik-primary hover:bg-gray-900 text-white font-montserrat font-medium tracking-wide lowercase px-6 py-2"
                 >
-                  {t('nav.start')}
+                  {t('nav.talk')}
                 </Button>
               </div>
             </div>
