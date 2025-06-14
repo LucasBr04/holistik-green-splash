@@ -1,4 +1,5 @@
 
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -13,7 +14,7 @@ const translations = {
   fr: {
     nav: {
       industry: 'expertise sectorielle',
-      services: 'business services',
+      services: 'conseil et services',
       about: 'à propos',
       blog: 'blog',
       talk: 'parlons-nous'
