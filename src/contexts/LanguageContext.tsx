@@ -64,6 +64,35 @@ const translations = {
         satisfaction: 'taux de satisfaction'
       }
     },
+    aboutPage: {
+      hero: {
+        title: 'je vis pleinement l\'aventure, tant sur le plan professionnel que personnel',
+        subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'excellence opérationnelle'
+      },
+      experience: {
+        title: 'un parcours international d\'exception',
+        paragraph1: 'mon expérience couvre toute la chaîne de valeur, du développement de concept et du financement à l\'entrée sur le marché, la stratégie de croissance et l\'excellence opérationnelle.',
+        paragraph2: 'dirigeant international, j\'ai mené des unités commerciales et des équipes fonctionnelles mondiales, avec plus de 25 ans d\'expérience en management général, ventes et marketing en Europe, aux États-Unis et en Chine.',
+        identity: 'je me définis comme un CRÉATEUR DE MARQUES, DÉVELOPPEUR D\'AFFAIRES et CRÉATEUR D\'EXPÉRIENCES',
+        passion: 'j\'ai une passion pour les clients et pour développer des propositions de valeur uniques. je gère des entreprises et des canaux avec un chiffre d\'affaires annuel allant de 40M€ à 2 milliards €.',
+        paragraph3: 'mon parcours professionnel englobe des rôles de direction dans divers secteurs allant de la grande consommation au luxe, des biens de consommation lifestyle au secteur tech, ainsi que le conseil en marques.'
+      },
+      philosophy: {
+        title: 'la philosophie du trail running appliquée au business',
+        transcendence: {
+          title: 'dépassement de soi',
+          desc: 'le trail running illustre l\'idée d\'aller toujours plus loin, de repousser les limites tout en respectant ce que la nature a de meilleur à nous offrir.'
+        },
+        wellbeing: {
+          title: 'bien-être global',
+          desc: 'au-delà de la course, la préparation et l\'entraînement influencent la santé physique et mentale. vous devenez l\'auteur de votre propre santé.'
+        },
+        skills: {
+          title: 'compétences transférables',
+          desc: 'se connaître, comprendre les risques, être attentif aux signaux, être agile, résilient et déterminé sont des leçons du trail applicables au monde professionnel.'
+        }
+      }
+    },
     services: {
       title: {
         prefix: 'nos',
@@ -206,6 +235,35 @@ const translations = {
         experience: 'years of experience',
         clients: 'clients supported',
         satisfaction: 'satisfaction rate'
+      }
+    },
+    aboutPage: {
+      hero: {
+        title: 'I live adventures to the fullest on both professional and personal sides',
+        subtitle: 'over 25 years of international management experience, from brand strategy to operational excellence'
+      },
+      experience: {
+        title: 'exceptional international journey',
+        paragraph1: 'my experience spans the entire value chain, from concept development and financing to market entry, growth strategy, and operational excellence.',
+        paragraph2: 'I am an international business executive leading business units and global functional teams, with more than 25 years of general management, sales and marketing experience in Europe, the US and China.',
+        identity: 'I define myself as a BRAND BUILDER, BUSINESS DEVELOPER and CREATOR OF EXPERIENCES',
+        passion: 'I have a passion for customers and for developing Unique Selling Proposition and Value Creation. I manage businesses and channels with annual sales ranging from 40M€ to 2 billion €.',
+        paragraph3: 'my professional background encompasses leadership roles in a variety of fields ranging from FMCG, CPG to the luxury industry, and lifestyle consumer goods to the tech sector, as well as brand consulting.'
+      },
+      philosophy: {
+        title: 'trail running philosophy applied to business',
+        transcendence: {
+          title: 'self-transcendence',
+          desc: 'trail running exemplifies the idea of always going further, pushing beyond limits while respecting the best that nature has to offer us.'
+        },
+        wellbeing: {
+          title: 'holistic well-being',
+          desc: 'beyond the race itself, preparation and training influence both physical and mental health, and have a lasting impact on well-being. You become the author of your own health.'
+        },
+        skills: {
+          title: 'transferable skills',
+          desc: 'knowing yourself, understanding risks, being attentive to environmental signals, being agile, resilient, determined, and committed are lessons from trail running applicable to the professional world.'
+        }
       }
     },
     services: {
