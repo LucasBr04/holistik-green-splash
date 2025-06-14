@@ -146,6 +146,11 @@ const translations = {
         title: 'message envoyé !',
         desc: 'nous vous répondrons dans les plus brefs délais.'
       }
+    },
+    blog: {
+      subtitle: 'insights and expertise in business transformation and go-to-market strategies',
+      loadMore: 'load more articles',
+      readMore: 'read more'
     }
   },
   en: {
@@ -285,6 +290,11 @@ const translations = {
         title: 'message sent!',
         desc: 'we will get back to you as soon as possible.'
       }
+    },
+    blog: {
+      subtitle: 'insights and expertise in business transformation and go-to-market strategies',
+      loadMore: 'load more articles',
+      readMore: 'read more'
     }
   }
 };
@@ -306,7 +316,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       if (value && typeof value === 'object' && k in value) {
         value = value[k];
       } else {
-        return key; // Return the key if translation not found
+        return key;
       }
     }
     

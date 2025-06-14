@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -46,7 +45,7 @@ const Navigation = () => {
   };
 
   const handleBlogClick = () => {
-    window.open('https://www.linkedin.com/company/105869544/admin/page-posts/published/', '_blank');
+    window.location.href = '/blog';
     setIsMobileMenuOpen(false);
   };
 
