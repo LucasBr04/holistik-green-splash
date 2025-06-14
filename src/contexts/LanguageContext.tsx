@@ -12,9 +12,9 @@ interface LanguageContextType {
 const translations = {
   fr: {
     // Navigation
-    'nav.home': 'Accueil',
+    'nav.industry': 'Expertise Sectorielle',
+    'nav.services': 'Services Business',
     'nav.about': 'À propos',
-    'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.start': 'Commencer',
 
@@ -106,9 +106,9 @@ const translations = {
   },
   en: {
     // Navigation
-    'nav.home': 'Home',
+    'nav.industry': 'Industry Expertise',
+    'nav.services': 'Business Services',
     'nav.about': 'About',
-    'nav.services': 'Services',
     'nav.contact': 'Contact',
     'nav.start': 'Get Started',
 

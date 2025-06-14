@@ -16,7 +16,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Détection de la section active
-      const sections = ['accueil', 'apropos', 'services', 'contact'];
+      const sections = ['accueil', 'expertise', 'services', 'apropos', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -46,9 +46,9 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'accueil', label: t('nav.home'), size: 'text-sm' },
-    { id: 'apropos', label: t('nav.about'), size: 'text-base' },
-    { id: 'services', label: t('nav.services'), size: 'text-lg' },
+    { id: 'expertise', label: t('nav.industry'), size: 'text-sm' },
+    { id: 'services', label: t('nav.services'), size: 'text-base' },
+    { id: 'apropos', label: t('nav.about'), size: 'text-lg' },
     { id: 'contact', label: t('nav.contact'), size: 'text-xl font-semibold' }
   ];
 
@@ -60,7 +60,7 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-8 py-6">
         <div className="flex items-center justify-between">
-          {/* Logo minimaliste */}
+          {/* Logo minimaliste avec fonctionnalité Home */}
           <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
