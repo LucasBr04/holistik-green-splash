@@ -71,14 +71,26 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
-          {/* Logo avec style exact de la charte et rotation */}
+          {/* Logo avec rotation continue 360 degrés */}
           <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
                 src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
                 alt="holistik consulting" 
-                className="h-6 w-6 sm:h-8 sm:w-8 transition-transform duration-700 group-hover:rotate-180" 
+                className="h-6 w-6 sm:h-8 sm:w-8 animate-[spin_2s_ease-in-out_infinite] [animation-delay:5s]" 
+                style={{
+                  animation: 'spin 2s ease-in-out infinite, pause 5s ease-in-out infinite'
+                }}
               />
+              <style jsx>{`
+                @keyframes pause {
+                  0%, 28.57% { transform: rotate(0deg); }
+                  71.43%, 100% { transform: rotate(360deg); }
+                }
+                img {
+                  animation: pause 7s ease-in-out infinite;
+                }
+              `}</style>
             </div>
             <span
               className="text-lg sm:text-xl font-holistik tracking-holistik-tight"
@@ -112,7 +124,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Language selector and CTA Button */}
           <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             <LanguageSelector />
             <Button 
@@ -123,7 +134,6 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
               variant="ghost"
