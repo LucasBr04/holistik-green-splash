@@ -1,5 +1,4 @@
 
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -31,21 +30,22 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
-      {/* Main content area */}
-      <div className="flex-1 flex items-center justify-center">
+      {/* Main content area with more spacing */}
+      <div className="flex-1 flex items-center justify-center pt-12 sm:pt-16 md:pt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            {/* Titre principal avec style exact de la charte */}
+            {/* Titre principal avec style plus arrondi */}
             <div className="mb-8 sm:mb-12">
               <h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 font-holistik"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 font-sans"
                 style={{
                   color: '#3b7d23',
                   fontWeight: 400,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
                   lineHeight: 0.85,
-                  letterSpacing: '-0.02em'
+                  letterSpacing: '-0.02em',
+                  fontFamily: 'ui-rounded, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
                 }}
               >
                 holistik consulting
@@ -96,4 +96,3 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 };
 
 export default HeroSection;
-
