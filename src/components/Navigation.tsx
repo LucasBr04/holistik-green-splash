@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -70,7 +71,7 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
-          {/* Logo avec style exact de la charte */}
+          {/* Logo avec style exact de la charte et rotation */}
           <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
