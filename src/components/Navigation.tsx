@@ -82,7 +82,7 @@ const Navigation = () => {
             </span>
           </div>
           
-          {/* Navigation avec les 3 sections demandées */}
+          {/* Navigation avec les 3 sections traduites */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {menuItems.map((item) => (
               <Button 
@@ -122,7 +122,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu avec les 3 sections */}
+        {/* Mobile Menu avec les 3 sections traduites */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-6 sm:mt-8 bg-white/98 backdrop-blur-xl rounded-lg shadow-lg border border-gray-100 p-6 sm:p-8">
             <div className="flex flex-col space-y-4 sm:space-y-6">
