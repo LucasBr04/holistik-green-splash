@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -41,7 +40,17 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           
           {/* Titre principal avec style exact de la charte */}
           <div className="mb-8 sm:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 leading-tight tracking-tight text-holistik-primary" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'normal' }}>
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 leading-tight font-holistik"
+              style={{
+                color: '#3b7d23',
+                fontWeight: 400,
+                letterSpacing: '0.05em',
+                textTransform: 'lowercase',
+                fontStyle: 'normal',
+                lineHeight: 1
+              }}
+            >
               holistik consulting
             </h1>
           </div>

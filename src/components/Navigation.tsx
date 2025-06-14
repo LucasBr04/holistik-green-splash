@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -80,7 +79,17 @@ const Navigation = () => {
                 className="h-6 w-6 sm:h-8 sm:w-8 transition-transform duration-700 group-hover:rotate-180" 
               />
             </div>
-            <span className="text-lg sm:text-xl text-holistik-primary font-normal tracking-wide" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'normal' }}>
+            <span
+              className="text-lg sm:text-xl font-holistik"
+              style={{
+                color: '#3b7d23',
+                fontWeight: 400,
+                letterSpacing: '0.05em',
+                textTransform: 'lowercase',
+                fontStyle: 'normal',
+                lineHeight: 1
+              }}
+            >
               holistik consulting
             </span>
           </div>

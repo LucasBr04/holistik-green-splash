@@ -156,6 +156,7 @@ export default {
 				sans: ['Montserrat', 'system-ui', 'sans-serif'],
 				'century-gothic': ['Century Gothic', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif'],
++				'holistik': ['Quicksand', 'Century Gothic', 'Montserrat', 'Arial', 'sans-serif'],
 			},
 			letterSpacing: {
 				tight: '-0.025em',
