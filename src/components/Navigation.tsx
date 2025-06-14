@@ -46,10 +46,10 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'expertise', label: t('nav.industry'), size: 'text-sm' },
-    { id: 'services', label: t('nav.services'), size: 'text-base' },
-    { id: 'apropos', label: t('nav.about'), size: 'text-lg' },
-    { id: 'contact', label: t('nav.contact'), size: 'text-xl font-semibold' }
+    { id: 'expertise', label: t('nav.industry') },
+    { id: 'services', label: t('nav.services') },
+    { id: 'apropos', label: t('nav.about') },
+    { id: 'contact', label: t('nav.contact') }
   ];
 
   return (
@@ -69,23 +69,23 @@ const Navigation = () => {
                 className="h-8 w-8 transition-transform duration-700 group-hover:rotate-180" 
               />
             </div>
-            <span className="text-xl font-light text-gray-900 tracking-wide">
-              <span className="font-medium text-holistik-primary">Holistik</span> Consulting
+            <span className="text-xl font-century-gothic text-gray-900 tracking-wide">
+              <span className="font-bold text-holistik-primary">Holistik</span> Consulting
             </span>
           </div>
           
-          {/* Navigation épurée avec progression des tailles */}
+          {/* Navigation épurée avec tailles uniformes */}
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item) => (
               <Button 
                 key={item.id}
                 variant="ghost" 
                 onClick={() => scrollToSection(item.id)}
-                className={`${item.size} ${
+                className={`text-base font-montserrat ${
                   activeSection === item.id 
                     ? 'text-holistik-primary' 
                     : 'text-gray-600 hover:text-holistik-primary'
-                } hover:bg-transparent px-0 py-2 transition-all duration-300 font-light tracking-wide`}
+                } hover:bg-transparent px-0 py-2 transition-all duration-300 font-medium tracking-wide`}
               >
                 {item.label}
               </Button>
@@ -97,7 +97,7 @@ const Navigation = () => {
             <LanguageSelector />
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-sm font-light tracking-wide transition-all duration-300 border-0"
+              className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-sm font-montserrat font-medium tracking-wide transition-all duration-300 border-0"
             >
               {t('nav.start')}
             </Button>
@@ -125,11 +125,11 @@ const Navigation = () => {
                   key={item.id}
                   variant="ghost" 
                   onClick={() => scrollToSection(item.id)}
-                  className={`${item.size} ${
+                  className={`text-base font-montserrat ${
                     activeSection === item.id 
                       ? 'text-holistik-primary' 
                       : 'text-gray-600'
-                  } hover:bg-transparent justify-start px-0 font-light tracking-wide`}
+                  } hover:bg-transparent justify-start px-0 font-medium tracking-wide`}
                 >
                   {item.label}
                 </Button>
@@ -138,7 +138,7 @@ const Navigation = () => {
                 <LanguageSelector />
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="bg-holistik-primary hover:bg-gray-900 text-white font-light tracking-wide"
+                  className="bg-holistik-primary hover:bg-gray-900 text-white font-montserrat font-medium tracking-wide"
                 >
                   {t('nav.start')}
                 </Button>

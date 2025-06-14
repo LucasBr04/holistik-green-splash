@@ -153,7 +153,9 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out'
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['Montserrat', 'system-ui', 'sans-serif'],
+				'century-gothic': ['Century Gothic', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif'],
 			},
 			letterSpacing: {
 				tight: '-0.025em',
