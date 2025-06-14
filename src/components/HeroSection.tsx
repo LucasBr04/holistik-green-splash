@@ -18,12 +18,12 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   };
 
   return (
-    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-16 sm:pt-20 bg-white">
-      {/* Cinematic banner image */}
+    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-20 sm:pt-24 bg-white">
+      {/* Mountain landscape banner image */}
       <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 relative overflow-hidden">
         <img 
-          src="https://media.licdn.com/dms/image/v2/D4E3DAQFFnlEleU6Iog/image-scale_191_1128/image-scale_191_1128/0/1735256276312/holistik_consulting_cover?e=1750503600&v=beta&t=fwBSbvfpLfE2Hjm3qbwa3HIgVjKkfoKBKqh4PnHnf48"
-          alt="Holistik Consulting Banner"
+          src="/lovable-uploads/b1be7c9f-f10a-42e1-87ae-d0d7b17bbc48.png"
+          alt="Mountain Landscape"
           className="w-full h-full object-cover"
         />
         {/* Subtle overlay for better text readability if needed */}
