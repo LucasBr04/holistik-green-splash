@@ -18,16 +18,14 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   };
 
   return (
-    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-20 sm:pt-24 bg-white">
+    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-16 sm:pt-20 bg-white">
       {/* Mountain landscape banner image */}
-      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 relative overflow-hidden bg-gray-50">
+      <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 relative overflow-hidden">
         <img 
           src="/lovable-uploads/b1be7c9f-f10a-42e1-87ae-d0d7b17bbc48.png"
           alt="Mountain Landscape"
           className="w-full h-full object-contain"
         />
-        {/* Subtle overlay for better text readability if needed */}
-        <div className="absolute inset-0 bg-black/10"></div>
       </div>
 
       {/* Main content area with balanced spacing */}
