@@ -61,7 +61,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-holistik-primary/5 to-white">
+    <section id="contact" className="py-20 bg-gradient-to-br from-holistik-primary/10 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
@@ -107,13 +107,6 @@ const ContactSection = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                <div className="bg-holistik-primary/10 p-6 rounded-lg">
-                  <h4 className="font-semibold text-holistik-primary mb-2">Premier échange</h4>
-                  <p className="text-gray-700 text-sm">
-                    Audit initial de 30 minutes pour identifier vos opportunités d'amélioration.
-                  </p>
                 </div>
               </CardContent>
             </Card>
