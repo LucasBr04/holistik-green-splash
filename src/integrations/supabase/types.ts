@@ -9,7 +9,107 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      blog_posts: {
+        Row: {
+          content: string
+          created_at: string
+          excerpt: string | null
+          featured_image: string | null
+          id: string
+          linkedin_post_id: string | null
+          published: boolean | null
+          published_at: string | null
+          slug: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          content: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image?: string | null
+          id?: string
+          linkedin_post_id?: string | null
+          published?: boolean | null
+          published_at?: string | null
+          slug: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          content?: string
+          created_at?: string
+          excerpt?: string | null
+          featured_image?: string | null
+          id?: string
+          linkedin_post_id?: string | null
+          published?: boolean | null
+          published_at?: string | null
+          slug?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "blog_posts_linkedin_post_id_fkey"
+            columns: ["linkedin_post_id"]
+            isOneToOne: false
+            referencedRelation: "linkedin_posts"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      linkedin_posts: {
+        Row: {
+          author_name: string | null
+          comments_count: number | null
+          content: string
+          created_at: string
+          engagement_count: number | null
+          id: string
+          images: Json | null
+          likes_count: number | null
+          linkedin_post_id: string
+          post_url: string | null
+          published_at: string
+          shares_count: number | null
+          synced_to_blog: boolean | null
+          updated_at: string
+        }
+        Insert: {
+          author_name?: string | null
+          comments_count?: number | null
+          content: string
+          created_at?: string
+          engagement_count?: number | null
+          id?: string
+          images?: Json | null
+          likes_count?: number | null
+          linkedin_post_id: string
+          post_url?: string | null
+          published_at: string
+          shares_count?: number | null
+          synced_to_blog?: boolean | null
+          updated_at?: string
+        }
+        Update: {
+          author_name?: string | null
+          comments_count?: number | null
+          content?: string
+          created_at?: string
+          engagement_count?: number | null
+          id?: string
+          images?: Json | null
+          likes_count?: number | null
+          linkedin_post_id?: string
+          post_url?: string | null
+          published_at?: string
+          shares_count?: number | null
+          synced_to_blog?: boolean | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
