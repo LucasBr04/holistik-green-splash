@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -32,7 +33,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Logo centered above title */}
-            <div className="mb-8 sm:mb-12 flex justify-center">
+            <div className="mb-6 sm:mb-8 flex justify-center">
               <img 
                 src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
                 alt="holistik consulting logo" 
