@@ -63,7 +63,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				holistik: {
-					primary: '#00A854',
+					primary: '#3b7d23',
 					secondary: '#1a1a1a',
 					accent: '#f8f9fa',
 					light: '#f1f5f9',
