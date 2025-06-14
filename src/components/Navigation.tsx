@@ -81,7 +81,7 @@ const Navigation = () => {
               />
             </div>
             <span className="text-lg sm:text-xl font-century-gothic text-gray-900 tracking-wide lowercase">
-              <span className="font-bold text-holistik-primary">holistik</span> consulting
+              <span className="text-holistik-primary">holistik</span> consulting
             </span>
           </div>
           

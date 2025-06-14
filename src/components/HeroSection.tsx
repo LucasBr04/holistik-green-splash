@@ -39,10 +39,10 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             </div>
           </div>
           
-          {/* Titre principal épuré */}
+          {/* Titre principal épuré avec Century Gothic */}
           <div className="mb-8 sm:mb-12">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-6 sm:mb-8 leading-tight tracking-tight font-century-gothic lowercase">
-              <span className="text-holistik-primary font-light">{t('hero.title.holistik')}</span>
+              <span className="text-holistik-primary font-extralight">{t('hero.title.holistik')}</span>
               <br />
               <span className="text-gray-900">{t('hero.title.consulting')}</span>
             </h1>
