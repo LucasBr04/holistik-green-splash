@@ -1,4 +1,5 @@
 
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -28,8 +29,8 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         />
       </div>
 
-      {/* Main content area with balanced spacing */}
-      <div className="flex-1 flex items-center justify-center pt-8 sm:pt-12 md:pt-16">
+      {/* Main content area with reduced spacing */}
+      <div className="flex-1 flex items-center justify-center pt-4 sm:pt-6 md:pt-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Logo centered above title */}
@@ -102,3 +103,4 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 };
 
 export default HeroSection;
+
