@@ -1,30 +1,33 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Target, Lightbulb, Users, Award, TrendingUp } from 'lucide-react';
+import { Target, Lightbulb, Users, Award, TrendingUp, Building2 } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const AboutSection = () => {
+  const { t } = useLanguage();
+
   const values = [
     {
       icon: <Target className="h-6 w-6 text-holistik-primary" />,
-      title: "Excellence",
-      description: "Des solutions sur mesure d'une qualité exceptionnelle"
-    },
-    {
-      icon: <Lightbulb className="h-6 w-6 text-holistik-primary" />,
-      title: "Innovation",
-      description: "Des approches créatives et avant-gardistes"
+      title: t('about.values.strategic.title'),
+      description: t('about.values.strategic.desc')
     },
     {
       icon: <Users className="h-6 w-6 text-holistik-primary" />,
-      title: "Partenariat",
-      description: "Une collaboration basée sur la confiance"
+      title: t('about.values.operational.title'),
+      description: t('about.values.operational.desc')
+    },
+    {
+      icon: <Building2 className="h-6 w-6 text-holistik-primary" />,
+      title: t('about.values.expertise.title'),
+      description: t('about.values.expertise.desc')
     }
   ];
 
   const stats = [
-    { icon: <Award className="h-5 w-5" />, value: "15+", label: "Années d'expérience" },
-    { icon: <Users className="h-5 w-5" />, value: "200+", label: "Clients accompagnés" },
-    { icon: <TrendingUp className="h-5 w-5" />, value: "95%", label: "Taux de satisfaction" }
+    { icon: <Award className="h-5 w-5" />, value: "15+", label: t('about.stats.experience') },
+    { icon: <Users className="h-5 w-5" />, value: "200+", label: t('about.stats.clients') },
+    { icon: <TrendingUp className="h-5 w-5" />, value: "95%", label: t('about.stats.satisfaction') }
   ];
 
   return (
@@ -32,7 +35,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-light text-gray-900 mb-4 tracking-tight">
-            À propos de <span className="text-holistik-primary">Holistik</span>
+            {t('about.title.prefix')} <span className="text-holistik-primary">Holistik</span>
           </h2>
           <div className="w-16 h-px bg-holistik-primary mx-auto"></div>
         </div>
@@ -40,23 +43,23 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-20 items-center mb-20">
           <div>
             <h3 className="text-2xl font-light text-gray-900 mb-8 tracking-tight">
-              Votre expert en <span className="text-holistik-primary">transformation business</span>
+              {t('about.expertise.title')} <span className="text-holistik-primary">{t('about.expertise.highlight')}</span>
             </h3>
             
             <div className="space-y-6 text-gray-600 leading-relaxed font-light">
               <p className="text-lg">
-                Fort de plus de <span className="text-holistik-primary">15 années d'expérience</span> dans le conseil stratégique, j'accompagne les entreprises dans leur développement.
+                {t('about.description.first')}
               </p>
               
               <p className="text-lg">
-                Mon approche <span className="text-holistik-primary">holistique</span> permet d'analyser votre organisation pour vous proposer des solutions intégrées et durables.
+                {t('about.description.second')}
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-sm mt-8 border-l-2 border-holistik-primary">
-              <h4 className="font-medium text-holistik-primary text-lg mb-3 tracking-wide">Ma mission</h4>
+              <h4 className="font-medium text-holistik-primary text-lg mb-3 tracking-wide">{t('about.mission.title')}</h4>
               <p className="text-gray-700 font-light">
-                Transformer vos défis business en avantages concurrentiels durables.
+                {t('about.mission.desc')}
               </p>
             </div>
           </div>

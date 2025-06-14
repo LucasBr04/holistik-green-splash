@@ -48,9 +48,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             </h1>
           </div>
           
-          {/* Sous-titre minimaliste */}
+          {/* Sous-titre repositionné */}
           <div className="mb-16">
-            <p className="text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto">
               {t('hero.subtitle')}
             </p>
             <div className="w-24 h-px bg-holistik-primary mx-auto mt-8"></div>

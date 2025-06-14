@@ -7,54 +7,57 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { TrendingUp, Target, Lightbulb, Users, BarChart3, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import { TrendingUp, Target, Lightbulb, Users, BarChart3, Zap, ArrowRight, CheckCircle, Store, Rocket } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ServicesSectionProps {
   onContactClick: () => void;
 }
 
 const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
+  const { t } = useLanguage();
+
   const services = [
     {
-      icon: TrendingUp,
-      title: "Stratégie & Croissance",
-      description: "Définition de stratégies sur mesure pour accélérer votre croissance et optimiser vos performances.",
-      features: ["Analyse stratégique", "Plan de croissance", "Optimisation des processus"],
+      icon: Target,
+      title: t('services.usp.title'),
+      description: t('services.usp.desc'),
+      features: [t('services.usp.feature1'), t('services.usp.feature2'), t('services.usp.feature3')],
       color: "from-holistik-primary to-holistik-secondary"
     },
     {
-      icon: Target,
-      title: "Transformation Digitale",
-      description: "Accompagnement dans votre transition numérique pour rester compétitif dans l'économie moderne.",
-      features: ["Digitalisation", "Automatisation", "Outils numériques"],
+      icon: TrendingUp,
+      title: t('services.positioning.title'),
+      description: t('services.positioning.desc'),
+      features: [t('services.positioning.feature1'), t('services.positioning.feature2'), t('services.positioning.feature3')],
       color: "from-holistik-secondary to-holistik-primary"
     },
     {
-      icon: Users,
-      title: "Management & Leadership",
-      description: "Développement des compétences managériales et renforcement du leadership dans vos équipes.",
-      features: ["Formation leadership", "Coaching équipes", "Gestion du changement"],
+      icon: Rocket,
+      title: t('services.gtm.title'),
+      description: t('services.gtm.desc'),
+      features: [t('services.gtm.feature1'), t('services.gtm.feature2'), t('services.gtm.feature3')],
       color: "from-holistik-primary/80 to-holistik-secondary/80"
     },
     {
-      icon: BarChart3,
-      title: "Performance & Analyse",
-      description: "Mesure et amélioration de vos performances grâce à des analyses approfondies et des KPI pertinents.",
-      features: ["Analytics avancés", "Tableaux de bord", "Reporting personnalisé"],
+      icon: Store,
+      title: t('services.retail.title'),
+      description: t('services.retail.desc'),
+      features: [t('services.retail.feature1'), t('services.retail.feature2'), t('services.retail.feature3')],
       color: "from-holistik-secondary/80 to-holistik-primary"
     },
     {
-      icon: Lightbulb,
-      title: "Innovation & R&D",
-      description: "Stimulation de l'innovation et accompagnement dans vos projets de recherche et développement.",
-      features: ["Brainstorming", "Prototypage", "Veille technologique"],
+      icon: BarChart3,
+      title: t('services.revenue.title'),
+      description: t('services.revenue.desc'),
+      features: [t('services.revenue.feature1'), t('services.revenue.feature2'), t('services.revenue.feature3')],
       color: "from-holistik-primary to-holistik-accent"
     },
     {
-      icon: Zap,
-      title: "Optimisation Opérationnelle",
-      description: "Amélioration de vos opérations pour une efficacité maximale et une réduction des coûts.",
-      features: ["Lean management", "Process mining", "Automatisation"],
+      icon: Users,
+      title: t('services.support.title'),
+      description: t('services.support.desc'),
+      features: [t('services.support.feature1'), t('services.support.feature2'), t('services.support.feature3')],
       color: "from-holistik-accent to-holistik-primary"
     }
   ];
@@ -75,13 +78,13 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
           </div>
           
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            Nos <span className="text-holistik-primary">Services</span>
+            {t('services.title.prefix')} <span className="text-holistik-primary">{t('services.title.highlight')}</span>
           </h2>
           
           <div className="w-32 h-1 bg-gradient-to-r from-holistik-primary to-holistik-secondary mx-auto mb-8" />
           
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Des solutions expertes et personnalisées pour transformer vos défis en opportunités de succès
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -133,7 +136,7 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
                           onClick={onContactClick}
                           className={`w-full bg-gradient-to-r ${service.color} hover:shadow-lg text-white font-semibold py-3 rounded-xl transform hover:scale-105 transition-all duration-300`}
                         >
-                          En savoir plus
+                          {t('services.cta')}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </div>
@@ -151,17 +154,17 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
         <div className="text-center mt-20">
           <div className="bg-gradient-to-r from-holistik-primary to-holistik-secondary rounded-3xl p-12 shadow-2xl transform hover:scale-105 transition-all duration-500">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Prêt à transformer votre business ?
+              {t('services.final.title')}
             </h3>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Discutons de vos objectifs et découvrons ensemble comment nous pouvons vous accompagner vers le succès.
+              {t('services.final.subtitle')}
             </p>
             <Button 
               size="lg"
               onClick={onContactClick}
               className="bg-white text-holistik-primary hover:bg-gray-100 px-12 py-6 text-lg rounded-2xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300"
             >
-              Planifier un entretien gratuit
+              {t('services.final.cta')}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </div>
