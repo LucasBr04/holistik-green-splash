@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -141,6 +142,11 @@ export default {
 						opacity: '1',
 						transform: 'scale(1)'
 					}
+				},
+				'spin-with-pause': {
+					'0%': { transform: 'rotate(0deg)' },
+					'12.5%': { transform: 'rotate(360deg)' },
+					'100%': { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -150,7 +156,8 @@ export default {
 				'slide-up': 'slide-up 0.5s ease-out',
 				'slide-in-left': 'slide-in-left 0.5s ease-out',
 				'slide-in-right': 'slide-in-right 0.5s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out'
+				'scale-in': 'scale-in 0.4s ease-out',
+				'spin-with-pause': 'spin-with-pause 8s linear infinite'
 			},
 			fontFamily: {
 				sans: ['Montserrat', 'system-ui', 'sans-serif'],
