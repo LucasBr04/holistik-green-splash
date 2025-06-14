@@ -39,9 +39,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             </div>
           </div>
           
-          {/* Titre principal avec Century Gothic selon la charte */}
+          {/* Titre principal avec style exact de la charte */}
           <div className="mb-8 sm:mb-12">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 leading-tight tracking-tight text-holistik-primary lowercase" style={{ fontFamily: 'Century Gothic, sans-serif' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 leading-tight tracking-tight text-holistik-primary" style={{ fontFamily: 'Arial, sans-serif', fontWeight: 'normal' }}>
               holistik consulting
             </h1>
           </div>
