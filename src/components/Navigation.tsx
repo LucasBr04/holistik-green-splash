@@ -71,13 +71,13 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
-          {/* Logo sans rotation et plus petit */}
+          {/* Logo sans rotation, taille originale */}
           <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
                 src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
                 alt="holistik consulting" 
-                className="h-4 w-4 sm:h-6 sm:w-6" 
+                className="h-6 w-6 sm:h-8 sm:w-8" 
               />
             </div>
             <span
