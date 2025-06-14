@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -12,7 +13,7 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section with Image */}
-      <section className="relative py-16 bg-gray-50">
+      <section className="relative pt-32 pb-16 bg-gray-50">
         <div className="container mx-auto px-8">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
@@ -25,11 +26,11 @@ const About = () => {
               </p>
             </div>
             
-            <div className="relative -my-8">
+            <div className="relative">
               <img 
                 src="/lovable-uploads/0ca04ceb-571e-444b-ad5e-1d37df373f49.png"
                 alt="Trail running - dépassement de soi"
-                className="w-full h-auto rounded-sm shadow-lg object-cover"
+                className="w-full h-auto rounded-sm shadow-lg object-cover object-center"
                 style={{
                   clipPath: 'inset(25% 0 25% 0)'
                 }}
@@ -119,3 +120,4 @@ const About = () => {
 };
 
 export default About;
+
