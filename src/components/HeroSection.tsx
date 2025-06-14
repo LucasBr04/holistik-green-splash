@@ -1,5 +1,6 @@
 
 
+
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -19,7 +20,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   };
 
   return (
-    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-16 sm:pt-20 bg-white">
+    <section id="accueil" className="min-h-screen flex flex-col relative overflow-hidden pt-12 sm:pt-14 bg-white">
       {/* Mountain landscape banner image */}
       <div className="w-full h-48 sm:h-64 md:h-80 lg:h-96 relative overflow-hidden">
         <img 
@@ -103,4 +104,5 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 };
 
 export default HeroSection;
+
 
