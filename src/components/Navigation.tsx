@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 import LanguageSelector from '@/components/LanguageSelector';
 
 const Navigation = () => {
@@ -10,24 +11,28 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('accueil');
   const { t } = useLanguage();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Détection de la section active
-      const sections = ['accueil', 'industry', 'services', 'apropos'];
-      const scrollPosition = window.scrollY + 100;
-      
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetBottom = offsetTop + element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
-            setActiveSection(section);
-            break;
+      // Détection de la section active seulement sur la page d'accueil
+      if (location.pathname === '/') {
+        const sections = ['accueil', 'industry', 'services'];
+        const scrollPosition = window.scrollY + 100;
+        
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const offsetTop = element.offsetTop;
+            const offsetBottom = offsetTop + element.offsetHeight;
+            
+            if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -35,20 +40,36 @@ const Navigation = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Si on n'est pas sur la page d'accueil, y aller d'abord
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false);
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
+  };
+
   const menuItems = [
-    { id: 'industry', label: t('nav.industry') },
-    { id: 'services', label: t('nav.services') },
-    { id: 'apropos', label: t('nav.about') }
+    { id: 'industry', label: t('nav.industry'), type: 'section' },
+    { id: 'services', label: t('nav.services'), type: 'section' },
+    { id: '/about', label: t('nav.about'), type: 'route' }
   ];
 
   return (
@@ -60,7 +81,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           {/* Logo avec fonctionnalité home */}
-          <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
+          <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => handleNavigation('/')}>
             <div className="relative">
               <img 
                 src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
@@ -88,9 +109,10 @@ const Navigation = () => {
               <Button 
                 key={item.id}
                 variant="ghost" 
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => item.type === 'section' ? scrollToSection(item.id) : handleNavigation(item.id)}
                 className={`text-sm lg:text-base font-montserrat lowercase ${
-                  activeSection === item.id 
+                  (item.type === 'section' && activeSection === item.id) || 
+                  (item.type === 'route' && location.pathname === item.id)
                     ? 'text-holistik-primary' 
                     : 'text-gray-600 hover:text-holistik-primary'
                 } hover:bg-transparent px-0 py-2 transition-all duration-300 font-medium tracking-wide`}
@@ -130,9 +152,10 @@ const Navigation = () => {
                 <Button 
                   key={item.id}
                   variant="ghost" 
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => item.type === 'section' ? scrollToSection(item.id) : handleNavigation(item.id)}
                   className={`text-base sm:text-lg font-montserrat lowercase ${
-                    activeSection === item.id 
+                    (item.type === 'section' && activeSection === item.id) || 
+                    (item.type === 'route' && location.pathname === item.id)
                       ? 'text-holistik-primary' 
                       : 'text-gray-600'
                   } hover:bg-transparent justify-start px-0 font-medium tracking-wide`}
