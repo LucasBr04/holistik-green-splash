@@ -12,9 +12,9 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section with Image */}
-      <section className="relative py-20 bg-gray-50">
+      <section className="relative py-12 bg-gray-50">
         <div className="container mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 tracking-tight leading-tight">
                 vivre pleinement et passionnément l'aventure professionnelle
