@@ -45,22 +45,10 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const handleBlogClick = () => {
-    window.location.href = '/blog';
-    setIsMobileMenuOpen(false);
-  };
-
-  const handleAdminClick = () => {
-    window.location.href = '/admin';
-    setIsMobileMenuOpen(false);
-  };
-
   const menuItems = [
     { id: 'expertise', label: t('nav.industry') },
     { id: 'services', label: t('nav.services') },
-    { id: 'apropos', label: t('nav.about') },
-    { id: 'blog', label: t('nav.blog'), onClick: handleBlogClick },
-    { id: 'admin', label: 'Admin', onClick: handleAdminClick }
+    { id: 'apropos', label: t('nav.about') }
   ];
 
   return (
@@ -100,7 +88,7 @@ const Navigation = () => {
               <Button 
                 key={item.id}
                 variant="ghost" 
-                onClick={item.onClick || (() => scrollToSection(item.id))}
+                onClick={() => scrollToSection(item.id)}
                 className={`text-sm lg:text-base font-montserrat lowercase ${
                   activeSection === item.id 
                     ? 'text-holistik-primary' 
@@ -142,7 +130,7 @@ const Navigation = () => {
                 <Button 
                   key={item.id}
                   variant="ghost" 
-                  onClick={item.onClick || (() => scrollToSection(item.id))}
+                  onClick={() => scrollToSection(item.id)}
                   className={`text-base sm:text-lg font-montserrat lowercase ${
                     activeSection === item.id 
                       ? 'text-holistik-primary' 
