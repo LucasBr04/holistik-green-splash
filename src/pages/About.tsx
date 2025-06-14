@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -11,9 +12,9 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section with Image */}
-      <section className="relative py-20 bg-gray-50">
+      <section className="relative py-16 bg-gray-50">
         <div className="container mx-auto px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-light text-gray-900 mb-6 tracking-tight leading-tight">
                 vivre pleinement et passionnément l'aventure professionnelle
@@ -24,7 +25,7 @@ const About = () => {
               </p>
             </div>
             
-            <div className="relative">
+            <div className="relative -my-8">
               <img 
                 src="/lovable-uploads/0ca04ceb-571e-444b-ad5e-1d37df373f49.png"
                 alt="Trail running - dépassement de soi"
