@@ -72,7 +72,7 @@ const ContactSection = () => {
           <h2 className="text-4xl font-bold text-holistik-primary mb-6">Contact</h2>
           <div className="w-24 h-1 bg-holistik-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Démarrons ensemble votre projet de transformation. Contactez-nous pour un premier échange gratuit.
+            Démarrons ensemble votre projet de transformation. Contactez-nous pour un premier échange.
           </p>
         </div>
 
@@ -110,10 +110,9 @@ const ContactSection = () => {
                 </div>
 
                 <div className="bg-holistik-primary/10 p-6 rounded-lg">
-                  <h4 className="font-semibold text-holistik-primary mb-2">Premier échange gratuit</h4>
+                  <h4 className="font-semibold text-holistik-primary mb-2">Premier échange</h4>
                   <p className="text-gray-700 text-sm">
-                    Profitez d'un audit initial de 30 minutes offert pour identifier 
-                    vos opportunités d'amélioration.
+                    Audit initial de 30 minutes pour identifier vos opportunités d'amélioration.
                   </p>
                 </div>
               </CardContent>
