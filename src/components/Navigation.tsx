@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -49,11 +50,17 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleAdminClick = () => {
+    window.location.href = '/admin';
+    setIsMobileMenuOpen(false);
+  };
+
   const menuItems = [
     { id: 'expertise', label: t('nav.industry') },
     { id: 'services', label: t('nav.services') },
     { id: 'apropos', label: t('nav.about') },
-    { id: 'blog', label: t('nav.blog'), onClick: handleBlogClick }
+    { id: 'blog', label: t('nav.blog'), onClick: handleBlogClick },
+    { id: 'admin', label: 'Admin', onClick: handleAdminClick }
   ];
 
   return (
