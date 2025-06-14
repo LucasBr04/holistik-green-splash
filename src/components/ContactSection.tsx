@@ -6,6 +6,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Dna, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -15,13 +16,14 @@ const ContactSection = () => {
     message: ''
   });
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulation d'envoi
     toast({
-      title: "Message envoyé !",
-      description: "Nous vous recontacterons dans les plus brefs délais.",
+      title: t('contact.toast.title'),
+      description: t('contact.toast.desc'),
     });
     setFormData({ name: '', email: '', company: '', message: '' });
   };
@@ -36,26 +38,26 @@ const ContactSection = () => {
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-holistik-primary" />,
-      title: "Email",
+      title: t('contact.info.email'),
       content: "contact@holistik-consulting.fr",
       action: "mailto:contact@holistik-consulting.fr"
     },
     {
       icon: <Phone className="h-6 w-6 text-holistik-primary" />,
-      title: "Téléphone",
+      title: t('contact.info.phone'),
       content: "+33 1 23 45 67 89",
       action: "tel:+33123456789"
     },
     {
       icon: <MapPin className="h-6 w-6 text-holistik-primary" />,
-      title: "Adresse",
+      title: t('contact.info.address'),
       content: "Paris, France",
       action: null
     },
     {
       icon: <Clock className="h-6 w-6 text-holistik-primary" />,
-      title: "Horaires",
-      content: "Lun-Ven 9h-18h",
+      title: t('contact.info.hours'),
+      content: t('contact.info.hours.value'),
       action: null
     }
   ];
@@ -69,10 +71,10 @@ const ContactSection = () => {
               <Dna className="h-6 w-6 text-white" />
             </div>
           </div>
-          <h2 className="text-4xl font-bold text-holistik-primary mb-6">Contact</h2>
+          <h2 className="text-4xl font-bold text-holistik-primary mb-6">{t('contact.title')}</h2>
           <div className="w-24 h-1 bg-holistik-primary mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Démarrons ensemble votre projet de transformation. Contactez-nous pour un premier échange.
+            {t('contact.subtitle')}
           </p>
         </div>
 
@@ -81,12 +83,11 @@ const ContactSection = () => {
           <div className="animate-slide-in-left">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="text-2xl text-holistik-primary">Parlons de votre projet</CardTitle>
+                <CardTitle className="text-2xl text-holistik-primary">{t('contact.talk.title')}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 <p className="text-gray-600 leading-relaxed">
-                  Que vous souhaitiez optimiser vos processus, développer une nouvelle stratégie, 
-                  ou transformer votre organisation, nous sommes là pour vous accompagner.
+                  {t('contact.talk.desc')}
                 </p>
                 
                 <div className="space-y-4">
@@ -116,14 +117,14 @@ const ContactSection = () => {
           <div className="animate-slide-in-right">
             <Card className="h-full">
               <CardHeader>
-                <CardTitle className="text-2xl text-holistik-primary">Envoyez-nous un message</CardTitle>
+                <CardTitle className="text-2xl text-holistik-primary">{t('contact.form.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nom complet *
+                        {t('contact.form.name')} *
                       </label>
                       <Input
                         id="name"
@@ -133,7 +134,7 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className="focus:ring-holistik-primary focus:border-holistik-primary"
-                        placeholder="Votre nom"
+                        placeholder={t('contact.form.name.placeholder')}
                       />
                     </div>
                     <div>
@@ -148,14 +149,14 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleChange}
                         className="focus:ring-holistik-primary focus:border-holistik-primary"
-                        placeholder="votre@email.com"
+                        placeholder={t('contact.form.email.placeholder')}
                       />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                      Entreprise
+                      {t('contact.form.company')}
                     </label>
                     <Input
                       id="company"
@@ -164,13 +165,13 @@ const ContactSection = () => {
                       value={formData.company}
                       onChange={handleChange}
                       className="focus:ring-holistik-primary focus:border-holistik-primary"
-                      placeholder="Nom de votre entreprise"
+                      placeholder={t('contact.form.company.placeholder')}
                     />
                   </div>
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message *
+                      {t('contact.form.message')} *
                     </label>
                     <Textarea
                       id="message"
@@ -180,7 +181,7 @@ const ContactSection = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="focus:ring-holistik-primary focus:border-holistik-primary"
-                      placeholder="Décrivez votre projet ou vos besoins..."
+                      placeholder={t('contact.form.message.placeholder')}
                     />
                   </div>
                   
@@ -190,7 +191,7 @@ const ContactSection = () => {
                     size="lg"
                   >
                     <Send className="mr-2 h-5 w-5" />
-                    Envoyer
+                    {t('contact.form.send')}
                   </Button>
                 </form>
               </CardContent>

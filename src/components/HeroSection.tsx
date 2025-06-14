@@ -1,12 +1,15 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface HeroSectionProps {
   onContactClick: () => void;
 }
 
 const HeroSection = ({ onContactClick }: HeroSectionProps) => {
+  const { t } = useLanguage();
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -39,16 +42,16 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           {/* Titre principal épuré */}
           <div className="mb-12">
             <h1 className="text-6xl md:text-7xl font-extralight mb-8 leading-tight tracking-tight">
-              <span className="text-holistik-primary font-light">Holistik</span>
+              <span className="text-holistik-primary font-light">{t('hero.title.holistik')}</span>
               <br />
-              <span className="text-gray-900">Consulting</span>
+              <span className="text-gray-900">{t('hero.title.consulting')}</span>
             </h1>
           </div>
           
           {/* Sous-titre minimaliste */}
           <div className="mb-16">
             <p className="text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-2xl mx-auto">
-              Excellence stratégique pour entreprises visionnaires
+              {t('hero.subtitle')}
             </p>
             <div className="w-24 h-px bg-holistik-primary mx-auto mt-8"></div>
           </div>
@@ -60,7 +63,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               onClick={() => scrollToSection('services')}
               className="bg-holistik-primary hover:bg-gray-900 text-white px-10 py-4 text-base font-light tracking-wide transition-all duration-500 border-0"
             >
-              Découvrir
+              {t('hero.discover')}
               <ArrowRight className="ml-3 h-4 w-4" />
             </Button>
             
@@ -70,7 +73,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               onClick={onContactClick}
               className="border border-gray-300 text-gray-700 hover:bg-gray-50 px-10 py-4 text-base font-light tracking-wide transition-all duration-500"
             >
-              Contact
+              {t('hero.contact')}
             </Button>
           </div>
         </div>

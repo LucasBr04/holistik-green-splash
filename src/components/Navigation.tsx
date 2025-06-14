@@ -2,11 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from '@/components/LanguageSelector';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('accueil');
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,10 +46,10 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'accueil', label: 'Accueil', size: 'text-sm' },
-    { id: 'apropos', label: 'À propos', size: 'text-base' },
-    { id: 'services', label: 'Services', size: 'text-lg' },
-    { id: 'contact', label: 'Contact', size: 'text-xl font-semibold' }
+    { id: 'accueil', label: t('nav.home'), size: 'text-sm' },
+    { id: 'apropos', label: t('nav.about'), size: 'text-base' },
+    { id: 'services', label: t('nav.services'), size: 'text-lg' },
+    { id: 'contact', label: t('nav.contact'), size: 'text-xl font-semibold' }
   ];
 
   return (
@@ -89,13 +92,14 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button épuré */}
-          <div className="hidden md:block">
+          {/* Language selector and CTA Button */}
+          <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <Button 
               onClick={() => scrollToSection('contact')}
               className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-sm font-light tracking-wide transition-all duration-300 border-0"
             >
-              Démarrer
+              {t('nav.start')}
             </Button>
           </div>
 
@@ -130,12 +134,15 @@ const Navigation = () => {
                   {item.label}
                 </Button>
               ))}
-              <Button 
-                onClick={() => scrollToSection('contact')}
-                className="bg-holistik-primary hover:bg-gray-900 text-white mt-6 font-light tracking-wide"
-              >
-                Démarrer
-              </Button>
+              <div className="flex items-center justify-between pt-4">
+                <LanguageSelector />
+                <Button 
+                  onClick={() => scrollToSection('contact')}
+                  className="bg-holistik-primary hover:bg-gray-900 text-white font-light tracking-wide"
+                >
+                  {t('nav.start')}
+                </Button>
+              </div>
             </div>
           </div>
         )}
