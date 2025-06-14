@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -11,192 +10,302 @@ interface LanguageContextType {
 
 const translations = {
   fr: {
-    // Navigation
-    'nav.industry': 'Expertise Sectorielle',
-    'nav.services': 'Services Business',
-    'nav.about': 'À propos',
-    'nav.contact': 'Contact',
-    'nav.start': 'Commencer',
-
-    // Hero Section
-    'hero.title.holistik': 'Holistik',
-    'hero.title.consulting': 'Consulting',
-    'hero.subtitle': 'Conseil stratégique et accompagnement opérationnel pour entreprises établies et startups',
-    'hero.discover': 'Découvrir nos services',
-    'hero.contact': 'Nous contacter',
-
-    // About Section
-    'about.title.prefix': 'À propos de',
-    'about.expertise.title': 'Votre expert en',
-    'about.expertise.highlight': 'transformation business',
-    'about.description.first': 'Fort de plus de 15 années d\'expérience dans le conseil stratégique, j\'accompagne les entreprises établies et les startups dans leur développement.',
-    'about.description.second': 'Mon approche holistique permet d\'analyser votre organisation pour vous proposer des solutions intégrées et durables.',
-    'about.mission.title': 'Ma mission',
-    'about.mission.desc': 'Transformer vos défis business en avantages concurrentiels durables.',
-    'about.values.strategic.title': 'Conseil Stratégique',
-    'about.values.strategic.desc': 'Définition de votre USP et positionnement de marque',
-    'about.values.operational.title': 'Accompagnement Opérationnel',
-    'about.values.operational.desc': 'Support concret dans l\'exécution de vos projets',
-    'about.values.expertise.title': 'Expertise Sectorielle',
-    'about.values.expertise.desc': 'Connaissance approfondie du retail et des startups',
-    'about.stats.experience': 'Années d\'expérience',
-    'about.stats.clients': 'Clients accompagnés',
-    'about.stats.satisfaction': 'Taux de satisfaction',
-
-    // Services Section
-    'services.title.prefix': 'Nos',
-    'services.title.highlight': 'Services',
-    'services.subtitle': 'Des solutions expertes pour définir votre USP, votre positionnement et vos stratégies go-to-market',
-    'services.usp.title': 'Définition de l\'USP',
-    'services.usp.desc': 'Identification et formulation de votre proposition de valeur unique pour vous différencier.',
-    'services.usp.feature1': 'Analyse concurrentielle',
-    'services.usp.feature2': 'Proposition de valeur',
-    'services.usp.feature3': 'Différenciation',
-    'services.positioning.title': 'Positionnement de Marque',
-    'services.positioning.desc': 'Construction d\'un positionnement fort et cohérent pour votre marque sur le marché.',
-    'services.positioning.feature1': 'Étude de marché',
-    'services.positioning.feature2': 'Stratégie de marque',
-    'services.positioning.feature3': 'Messaging',
-    'services.gtm.title': 'Stratégies Go-to-Market',
-    'services.gtm.desc': 'Développement de stratégies de lancement et de commercialisation efficaces.',
-    'services.gtm.feature1': 'Plan de lancement',
-    'services.gtm.feature2': 'Canaux de distribution',
-    'services.gtm.feature3': 'Stratégie commerciale',
-    'services.retail.title': 'Expérience Retail',
-    'services.retail.desc': 'Optimisation de l\'expérience client en point de vente et digital.',
-    'services.retail.feature1': 'Parcours client',
-    'services.retail.feature2': 'Expérience magasin',
-    'services.retail.feature3': 'Retail digital',
-    'services.revenue.title': 'Modèles de Revenus',
-    'services.revenue.desc': 'Construction de flux de revenus durables et rentables.',
-    'services.revenue.feature1': 'Monétisation',
-    'services.revenue.feature2': 'Pricing strategy',
-    'services.revenue.feature3': 'Revenue streams',
-    'services.support.title': 'Accompagnement Opérationnel',
-    'services.support.desc': 'Support concret dans l\'exécution de vos projets stratégiques.',
-    'services.support.feature1': 'Mise en œuvre',
-    'services.support.feature2': 'Suivi projet',
-    'services.support.feature3': 'Formation équipes',
-    'services.cta': 'En savoir plus',
-    'services.final.title': 'Prêt à transformer votre business ?',
-    'services.final.subtitle': 'Discutons de vos objectifs et découvrons ensemble comment nous pouvons vous accompagner vers le succès.',
-    'services.final.cta': 'Planifier un entretien',
-
-    // Contact Section
-    'contact.title': 'Contactez-nous',
-    'contact.subtitle': 'Prêt à transformer votre business ? Discutons de vos projets et objectifs.',
-    'contact.talk.title': 'Parlons de votre projet',
-    'contact.talk.desc': 'Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous accompagner.',
-    'contact.info.email': 'Email',
-    'contact.info.phone': 'Téléphone',
-    'contact.info.address': 'Adresse',
-    'contact.info.hours': 'Horaires',
-    'contact.info.hours.value': 'Lun-Ven : 9h-18h',
-    'contact.form.title': 'Envoyez-nous un message',
-    'contact.form.name': 'Nom',
-    'contact.form.name.placeholder': 'Votre nom complet',
-    'contact.form.email.placeholder': 'votre@email.com',
-    'contact.form.company': 'Entreprise',
-    'contact.form.company.placeholder': 'Nom de votre entreprise',
-    'contact.form.message': 'Message',
-    'contact.form.message.placeholder': 'Décrivez votre projet ou vos besoins...',
-    'contact.form.send': 'Envoyer le message',
-    'contact.toast.title': 'Message envoyé !',
-    'contact.toast.desc': 'Nous vous répondrons dans les plus brefs délais.',
+    nav: {
+      industry: 'industry expertise',
+      services: 'business services',
+      about: 'about',
+      contact: 'contact',
+      start: 'commencer'
+    },
+    hero: {
+      title: {
+        holistik: 'holistik',
+        consulting: 'consulting'
+      },
+      subtitle: 'conseil stratégique et accompagnement opérationnel pour définir votre USP, positionnement de marque, stratégies go-to-market et expérience retail',
+      discover: 'découvrir nos services',
+      contact: 'nous contacter'
+    },
+    about: {
+      title: {
+        prefix: 'À propos de'
+      },
+      expertise: {
+        title: 'Votre expert en',
+        highlight: 'transformation business'
+      },
+      description: {
+        first: 'Fort de plus de 15 années d\'expérience dans le conseil stratégique, j\'accompagne les entreprises établies et les startups dans leur développement.',
+        second: 'Mon approche holistique permet d\'analyser votre organisation pour vous proposer des solutions intégrées et durables.'
+      },
+      mission: {
+        title: 'Ma mission',
+        desc: 'Transformer vos défis business en avantages concurrentiels durables.'
+      },
+      values: {
+        strategic: {
+          title: 'Conseil Stratégique',
+          desc: 'Définition de votre USP et positionnement de marque'
+        },
+        operational: {
+          title: 'Accompagnement Opérationnel',
+          desc: 'Support concret dans l\'exécution de vos projets'
+        },
+        expertise: {
+          title: 'Expertise Sectorielle',
+          desc: 'Connaissance approfondie du retail et des startups'
+        }
+      },
+      stats: {
+        experience: 'Années d\'expérience',
+        clients: 'Clients accompagnés',
+        satisfaction: 'Taux de satisfaction'
+      }
+    },
+    services: {
+      title: {
+        prefix: 'Nos',
+        highlight: 'Services'
+      },
+      subtitle: 'Des solutions expertes pour définir votre USP, votre positionnement et vos stratégies go-to-market',
+      usp: {
+        title: 'Définition de l\'USP',
+        desc: 'Identification et formulation de votre proposition de valeur unique pour vous différencier.',
+        feature1: 'Analyse concurrentielle',
+        feature2: 'Proposition de valeur',
+        feature3: 'Différenciation'
+      },
+      positioning: {
+        title: 'Positionnement de Marque',
+        desc: 'Construction d\'un positionnement fort et cohérent pour votre marque sur le marché.',
+        feature1: 'Étude de marché',
+        feature2: 'Stratégie de marque',
+        feature3: 'Messaging'
+      },
+      gtm: {
+        title: 'Stratégies Go-to-Market',
+        desc: 'Développement de stratégies de lancement et de commercialisation efficaces.',
+        feature1: 'Plan de lancement',
+        feature2: 'Canaux de distribution',
+        feature3: 'Stratégie commerciale'
+      },
+      retail: {
+        title: 'Expérience Retail',
+        desc: 'Optimisation de l\'expérience client en point de vente et digital.',
+        feature1: 'Parcours client',
+        feature2: 'Expérience magasin',
+        feature3: 'Retail digital'
+      },
+      revenue: {
+        title: 'Modèles de Revenus',
+        desc: 'Construction de flux de revenus durables et rentables.',
+        feature1: 'Monétisation',
+        feature2: 'Pricing strategy',
+        feature3: 'Revenue streams'
+      },
+      support: {
+        title: 'Accompagnement Opérationnel',
+        desc: 'Support concret dans l\'exécution de vos projets stratégiques.',
+        feature1: 'Mise en œuvre',
+        feature2: 'Suivi projet',
+        feature3: 'Formation équipes'
+      },
+      cta: 'En savoir plus',
+      final: {
+        title: 'Prêt à transformer votre business ?',
+        subtitle: 'Discutons de vos objectifs et découvrons ensemble comment nous pouvons vous accompagner vers le succès.',
+        cta: 'Planifier un entretien'
+      }
+    },
+    contact: {
+      title: 'Contactez-nous',
+      subtitle: 'Prêt à transformer votre business ? Discutons de vos projets et objectifs.',
+      talk: {
+        title: 'Parlons de votre projet',
+        desc: 'Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous accompagner.'
+      },
+      info: {
+        email: 'Email',
+        phone: 'Téléphone',
+        address: 'Adresse',
+        hours: 'Horaires',
+        hours: {
+          value: 'Lun-Ven : 9h-18h'
+        }
+      },
+      form: {
+        title: 'Envoyez-nous un message',
+        name: 'Nom',
+        name: {
+          placeholder: 'Votre nom complet'
+        },
+        email: {
+          placeholder: 'votre@email.com'
+        },
+        company: 'Entreprise',
+        company: {
+          placeholder: 'Nom de votre entreprise'
+        },
+        message: 'Message',
+        message: {
+          placeholder: 'Décrivez votre projet ou vos besoins...'
+        },
+        send: 'Envoyer le message'
+      },
+      toast: {
+        title: 'Message envoyé !',
+        desc: 'Nous vous répondrons dans les plus brefs délais.'
+      }
+    }
   },
   en: {
-    // Navigation
-    'nav.industry': 'Industry Expertise',
-    'nav.services': 'Business Services',
-    'nav.about': 'About',
-    'nav.contact': 'Contact',
-    'nav.start': 'Get Started',
-
-    // Hero Section
-    'hero.title.holistik': 'Holistik',
-    'hero.title.consulting': 'Consulting',
-    'hero.subtitle': 'Strategic and management consulting with hands-on business support for established companies and startups',
-    'hero.discover': 'Discover our services',
-    'hero.contact': 'Contact us',
-
-    // About Section
-    'about.title.prefix': 'About',
-    'about.expertise.title': 'Your expert in',
-    'about.expertise.highlight': 'business transformation',
-    'about.description.first': 'With over 15 years of experience in strategic consulting, I support established companies and startups in their development.',
-    'about.description.second': 'My holistic approach analyzes your organization to provide integrated and sustainable solutions.',
-    'about.mission.title': 'My mission',
-    'about.mission.desc': 'Transform your business challenges into sustainable competitive advantages.',
-    'about.values.strategic.title': 'Strategic Consulting',
-    'about.values.strategic.desc': 'Define your USP and brand positioning',
-    'about.values.operational.title': 'Hands-on Support',
-    'about.values.operational.desc': 'Concrete support in executing your projects',
-    'about.values.expertise.title': 'Industry Expertise',
-    'about.values.expertise.desc': 'Deep knowledge of retail and startups',
-    'about.stats.experience': 'Years of experience',
-    'about.stats.clients': 'Clients supported',
-    'about.stats.satisfaction': 'Satisfaction rate',
-
-    // Services Section
-    'services.title.prefix': 'Our',
-    'services.title.highlight': 'Services',
-    'services.subtitle': 'Expert solutions to define your USP, positioning, and go-to-market strategies',
-    'services.usp.title': 'USP Definition',
-    'services.usp.desc': 'Identify and formulate your unique value proposition to differentiate yourself.',
-    'services.usp.feature1': 'Competitive analysis',
-    'services.usp.feature2': 'Value proposition',
-    'services.usp.feature3': 'Differentiation',
-    'services.positioning.title': 'Brand Positioning',
-    'services.positioning.desc': 'Build a strong and coherent positioning for your brand in the market.',
-    'services.positioning.feature1': 'Market research',
-    'services.positioning.feature2': 'Brand strategy',
-    'services.positioning.feature3': 'Messaging',
-    'services.gtm.title': 'Go-to-Market Strategies',
-    'services.gtm.desc': 'Develop effective launch and commercialization strategies.',
-    'services.gtm.feature1': 'Launch plan',
-    'services.gtm.feature2': 'Distribution channels',
-    'services.gtm.feature3': 'Sales strategy',
-    'services.retail.title': 'Retail Experience',
-    'services.retail.desc': 'Optimize customer experience in-store and digitally.',
-    'services.retail.feature1': 'Customer journey',
-    'services.retail.feature2': 'Store experience',
-    'services.retail.feature3': 'Digital retail',
-    'services.revenue.title': 'Revenue Models',
-    'services.revenue.desc': 'Build sustainable and profitable revenue streams.',
-    'services.revenue.feature1': 'Monetization',
-    'services.revenue.feature2': 'Pricing strategy',
-    'services.revenue.feature3': 'Revenue streams',
-    'services.support.title': 'Hands-on Support',
-    'services.support.desc': 'Concrete support in executing your strategic projects.',
-    'services.support.feature1': 'Implementation',
-    'services.support.feature2': 'Project tracking',
-    'services.support.feature3': 'Team training',
-    'services.cta': 'Learn more',
-    'services.final.title': 'Ready to transform your business?',
-    'services.final.subtitle': 'Let\'s discuss your objectives and discover together how we can support you towards success.',
-    'services.final.cta': 'Schedule a consultation',
-
-    // Contact Section
-    'contact.title': 'Contact Us',
-    'contact.subtitle': 'Ready to transform your business? Let\'s discuss your projects and objectives.',
-    'contact.talk.title': 'Let\'s talk about your project',
-    'contact.talk.desc': 'Every project is unique. Contact us to discuss your specific needs and discover how we can support you.',
-    'contact.info.email': 'Email',
-    'contact.info.phone': 'Phone',
-    'contact.info.address': 'Address',
-    'contact.info.hours': 'Hours',
-    'contact.info.hours.value': 'Mon-Fri: 9AM-6PM',
-    'contact.form.title': 'Send us a message',
-    'contact.form.name': 'Name',
-    'contact.form.name.placeholder': 'Your full name',
-    'contact.form.email.placeholder': 'your@email.com',
-    'contact.form.company': 'Company',
-    'contact.form.company.placeholder': 'Your company name',
-    'contact.form.message': 'Message',
-    'contact.form.message.placeholder': 'Describe your project or needs...',
-    'contact.form.send': 'Send message',
-    'contact.toast.title': 'Message sent!',
-    'contact.toast.desc': 'We will get back to you as soon as possible.',
+    nav: {
+      industry: 'industry expertise',
+      services: 'business services', 
+      about: 'about',
+      contact: 'contact',
+      start: 'get started'
+    },
+    hero: {
+      title: {
+        holistik: 'holistik',
+        consulting: 'consulting'
+      },
+      subtitle: 'strategic and management consulting with hands-on business support for USP, brand positioning, go-to-market strategies and retail experience',
+      discover: 'discover our services',
+      contact: 'contact us'
+    },
+    about: {
+      title: {
+        prefix: 'About'
+      },
+      expertise: {
+        title: 'Your expert in',
+        highlight: 'business transformation'
+      },
+      description: {
+        first: 'With over 15 years of experience in strategic consulting, I support established companies and startups in their development.',
+        second: 'My holistic approach analyzes your organization to provide integrated and sustainable solutions.'
+      },
+      mission: {
+        title: 'My mission',
+        desc: 'Transform your business challenges into sustainable competitive advantages.'
+      },
+      values: {
+        strategic: {
+          title: 'Strategic Consulting',
+          desc: 'Define your USP and brand positioning'
+        },
+        operational: {
+          title: 'Hands-on Support',
+          desc: 'Concrete support in executing your projects'
+        },
+        expertise: {
+          title: 'Industry Expertise',
+          desc: 'Deep knowledge of retail and startups'
+        }
+      },
+      stats: {
+        experience: 'Years of experience',
+        clients: 'Clients supported',
+        satisfaction: 'Satisfaction rate'
+      }
+    },
+    services: {
+      title: {
+        prefix: 'Our',
+        highlight: 'Services'
+      },
+      subtitle: 'Expert solutions to define your USP, positioning, and go-to-market strategies',
+      usp: {
+        title: 'USP Definition',
+        desc: 'Identify and formulate your unique value proposition to differentiate yourself.',
+        feature1: 'Competitive analysis',
+        feature2: 'Value proposition',
+        feature3: 'Differentiation'
+      },
+      positioning: {
+        title: 'Brand Positioning',
+        desc: 'Build a strong and coherent positioning for your brand in the market.',
+        feature1: 'Market research',
+        feature2: 'Brand strategy',
+        feature3: 'Messaging'
+      },
+      gtm: {
+        title: 'Go-to-Market Strategies',
+        desc: 'Develop effective launch and commercialization strategies.',
+        feature1: 'Launch plan',
+        feature2: 'Distribution channels',
+        feature3: 'Sales strategy'
+      },
+      retail: {
+        title: 'Retail Experience',
+        desc: 'Optimize customer experience in-store and digitally.',
+        feature1: 'Customer journey',
+        feature2: 'Store experience',
+        feature3: 'Digital retail'
+      },
+      revenue: {
+        title: 'Revenue Models',
+        desc: 'Build sustainable and profitable revenue streams.',
+        feature1: 'Monetization',
+        feature2: 'Pricing strategy',
+        feature3: 'Revenue streams'
+      },
+      support: {
+        title: 'Hands-on Support',
+        desc: 'Concrete support in executing your strategic projects.',
+        feature1: 'Implementation',
+        feature2: 'Project tracking',
+        feature3: 'Team training'
+      },
+      cta: 'Learn more',
+      final: {
+        title: 'Ready to transform your business?',
+        subtitle: 'Let\'s discuss your objectives and discover together how we can support you towards success.',
+        cta: 'Schedule a consultation'
+      }
+    },
+    contact: {
+      title: 'Contact Us',
+      subtitle: 'Ready to transform your business? Let\'s discuss your projects and objectives.',
+      talk: {
+        title: 'Let\'s talk about your project',
+        desc: 'Every project is unique. Contact us to discuss your specific needs and discover how we can support you.'
+      },
+      info: {
+        email: 'Email',
+        phone: 'Phone',
+        address: 'Address',
+        hours: 'Hours',
+        hours: {
+          value: 'Mon-Fri: 9AM-6PM'
+        }
+      },
+      form: {
+        title: 'Send us a message',
+        name: 'Name',
+        name: {
+          placeholder: 'Your full name'
+        },
+        email: {
+          placeholder: 'your@email.com'
+        },
+        company: 'Company',
+        company: {
+          placeholder: 'Your company name'
+        },
+        message: 'Message',
+        message: {
+          placeholder: 'Describe your project or needs...'
+        },
+        send: 'Send message'
+      },
+      toast: {
+        title: 'Message sent!',
+        desc: 'We will get back to you as soon as possible.'
+      }
+    }
   }
 };
 

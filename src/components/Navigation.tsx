@@ -58,30 +58,30 @@ const Navigation = () => {
         ? 'bg-white/95 backdrop-blur-xl shadow-sm border-b border-gray-100' 
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-8 py-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
           {/* Logo minimaliste avec fonctionnalité Home */}
-          <div className="flex items-center space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
+          <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
                 src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
-                alt="Holistik Consulting" 
-                className="h-8 w-8 transition-transform duration-700 group-hover:rotate-180" 
+                alt="holistik consulting" 
+                className="h-6 w-6 sm:h-8 sm:w-8 transition-transform duration-700 group-hover:rotate-180" 
               />
             </div>
-            <span className="text-xl font-century-gothic text-gray-900 tracking-wide">
-              <span className="font-bold text-holistik-primary">Holistik</span> Consulting
+            <span className="text-lg sm:text-xl font-century-gothic text-gray-900 tracking-wide lowercase">
+              <span className="font-bold text-holistik-primary">holistik</span> consulting
             </span>
           </div>
           
           {/* Navigation épurée avec tailles uniformes */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {menuItems.map((item) => (
               <Button 
                 key={item.id}
                 variant="ghost" 
                 onClick={() => scrollToSection(item.id)}
-                className={`text-base font-montserrat ${
+                className={`text-sm lg:text-base font-montserrat lowercase ${
                   activeSection === item.id 
                     ? 'text-holistik-primary' 
                     : 'text-gray-600 hover:text-holistik-primary'
@@ -93,11 +93,11 @@ const Navigation = () => {
           </div>
 
           {/* Language selector and CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4">
             <LanguageSelector />
             <Button 
               onClick={() => scrollToSection('contact')}
-              className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-sm font-montserrat font-medium tracking-wide transition-all duration-300 border-0"
+              className="bg-holistik-primary hover:bg-gray-900 text-white px-6 lg:px-8 py-2 lg:py-3 text-sm font-montserrat font-medium tracking-wide transition-all duration-300 border-0 lowercase"
             >
               {t('nav.start')}
             </Button>
@@ -109,23 +109,23 @@ const Navigation = () => {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:bg-transparent"
+              className="text-gray-700 hover:bg-transparent h-8 w-8 sm:h-10 sm:w-10"
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              {isMobileMenuOpen ? <X className="h-4 w-4 sm:h-5 sm:w-5" /> : <Menu className="h-4 w-4 sm:h-5 sm:w-5" />}
             </Button>
           </div>
         </div>
 
         {/* Mobile Menu épuré */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-8 bg-white/98 backdrop-blur-xl rounded-lg shadow-lg border border-gray-100 p-8">
-            <div className="flex flex-col space-y-6">
+          <div className="md:hidden mt-6 sm:mt-8 bg-white/98 backdrop-blur-xl rounded-lg shadow-lg border border-gray-100 p-6 sm:p-8">
+            <div className="flex flex-col space-y-4 sm:space-y-6">
               {menuItems.map((item) => (
                 <Button 
                   key={item.id}
                   variant="ghost" 
                   onClick={() => scrollToSection(item.id)}
-                  className={`text-base font-montserrat ${
+                  className={`text-base sm:text-lg font-montserrat lowercase ${
                     activeSection === item.id 
                       ? 'text-holistik-primary' 
                       : 'text-gray-600'
@@ -134,11 +134,11 @@ const Navigation = () => {
                   {item.label}
                 </Button>
               ))}
-              <div className="flex items-center justify-between pt-4">
+              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                 <LanguageSelector />
                 <Button 
                   onClick={() => scrollToSection('contact')}
-                  className="bg-holistik-primary hover:bg-gray-900 text-white font-montserrat font-medium tracking-wide"
+                  className="bg-holistik-primary hover:bg-gray-900 text-white font-montserrat font-medium tracking-wide lowercase px-6 py-2"
                 >
                   {t('nav.start')}
                 </Button>
