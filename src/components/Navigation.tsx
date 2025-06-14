@@ -16,7 +16,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Détection de la section active
-      const sections = ['accueil', 'apropos', 'services', 'contact'];
+      const sections = ['accueil', 'industry', 'services', 'apropos'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -46,8 +46,9 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'apropos', label: t('nav.about') },
-    { id: 'services', label: t('nav.services') }
+    { id: 'industry', label: t('nav.industry') },
+    { id: 'services', label: t('nav.services') },
+    { id: 'apropos', label: t('nav.about') }
   ];
 
   return (
@@ -58,7 +59,7 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
-          {/* Logo avec rotation et taille originale */}
+          {/* Logo avec fonctionnalité home */}
           <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => scrollToSection('accueil')}>
             <div className="relative">
               <img 
@@ -81,7 +82,7 @@ const Navigation = () => {
             </span>
           </div>
           
-          {/* Navigation épurée avec tailles uniformes */}
+          {/* Navigation avec les 3 sections demandées */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {menuItems.map((item) => (
               <Button 
@@ -121,7 +122,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu épuré */}
+        {/* Mobile Menu avec les 3 sections */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-6 sm:mt-8 bg-white/98 backdrop-blur-xl rounded-lg shadow-lg border border-gray-100 p-6 sm:p-8">
             <div className="flex flex-col space-y-4 sm:space-y-6">
