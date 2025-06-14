@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -28,133 +29,123 @@ const translations = {
     },
     about: {
       title: {
-        prefix: 'À propos de'
+        prefix: 'à propos de'
       },
       expertise: {
-        title: 'Votre expert en',
+        title: 'votre expert en',
         highlight: 'transformation business'
       },
       description: {
-        first: 'Fort de plus de 15 années d\'expérience dans le conseil stratégique, j\'accompagne les entreprises établies et les startups dans leur développement.',
-        second: 'Mon approche holistique permet d\'analyser votre organisation pour vous proposer des solutions intégrées et durables.'
+        first: 'fort de plus de 15 années d\'expérience dans le conseil stratégique, j\'accompagne les entreprises établies et les startups dans leur développement.',
+        second: 'mon approche holistique permet d\'analyser votre organisation pour vous proposer des solutions intégrées et durables.'
       },
       mission: {
-        title: 'Ma mission',
-        desc: 'Transformer vos défis business en avantages concurrentiels durables.'
+        title: 'ma mission',
+        desc: 'transformer vos défis business en avantages concurrentiels durables.'
       },
       values: {
         strategic: {
-          title: 'Conseil Stratégique',
-          desc: 'Définition de votre USP et positionnement de marque'
+          title: 'conseil stratégique',
+          desc: 'définition de votre USP et positionnement de marque'
         },
         operational: {
-          title: 'Accompagnement Opérationnel',
-          desc: 'Support concret dans l\'exécution de vos projets'
+          title: 'accompagnement opérationnel',
+          desc: 'support concret dans l\'exécution de vos projets'
         },
         expertise: {
-          title: 'Expertise Sectorielle',
-          desc: 'Connaissance approfondie du retail et des startups'
+          title: 'expertise sectorielle',
+          desc: 'connaissance approfondie du retail et des startups'
         }
       },
       stats: {
-        experience: 'Années d\'expérience',
-        clients: 'Clients accompagnés',
-        satisfaction: 'Taux de satisfaction'
+        experience: 'années d\'expérience',
+        clients: 'clients accompagnés',
+        satisfaction: 'taux de satisfaction'
       }
     },
     services: {
       title: {
-        prefix: 'Nos',
-        highlight: 'Services'
+        prefix: 'nos',
+        highlight: 'services'
       },
-      subtitle: 'Des solutions expertes pour définir votre USP, votre positionnement et vos stratégies go-to-market',
+      subtitle: 'des solutions expertes pour définir votre USP, votre positionnement et vos stratégies go-to-market',
       usp: {
-        title: 'Définition de l\'USP',
-        desc: 'Identification et formulation de votre proposition de valeur unique pour vous différencier.',
-        feature1: 'Analyse concurrentielle',
-        feature2: 'Proposition de valeur',
-        feature3: 'Différenciation'
+        title: 'définition de l\'USP',
+        desc: 'identification et formulation de votre proposition de valeur unique pour vous différencier.',
+        feature1: 'analyse concurrentielle',
+        feature2: 'proposition de valeur',
+        feature3: 'différenciation'
       },
       positioning: {
-        title: 'Positionnement de Marque',
-        desc: 'Construction d\'un positionnement fort et cohérent pour votre marque sur le marché.',
-        feature1: 'Étude de marché',
-        feature2: 'Stratégie de marque',
-        feature3: 'Messaging'
+        title: 'positionnement de marque',
+        desc: 'construction d\'un positionnement fort et cohérent pour votre marque sur le marché.',
+        feature1: 'étude de marché',
+        feature2: 'stratégie de marque',
+        feature3: 'messaging'
       },
       gtm: {
-        title: 'Stratégies Go-to-Market',
-        desc: 'Développement de stratégies de lancement et de commercialisation efficaces.',
-        feature1: 'Plan de lancement',
-        feature2: 'Canaux de distribution',
-        feature3: 'Stratégie commerciale'
+        title: 'stratégies go-to-market',
+        desc: 'développement de stratégies de lancement et de commercialisation efficaces.',
+        feature1: 'plan de lancement',
+        feature2: 'canaux de distribution',
+        feature3: 'stratégie commerciale'
       },
       retail: {
-        title: 'Expérience Retail',
-        desc: 'Optimisation de l\'expérience client en point de vente et digital.',
-        feature1: 'Parcours client',
-        feature2: 'Expérience magasin',
-        feature3: 'Retail digital'
+        title: 'expérience retail',
+        desc: 'optimisation de l\'expérience client en point de vente et digital.',
+        feature1: 'parcours client',
+        feature2: 'expérience magasin',
+        feature3: 'retail digital'
       },
       revenue: {
-        title: 'Modèles de Revenus',
-        desc: 'Construction de flux de revenus durables et rentables.',
-        feature1: 'Monétisation',
-        feature2: 'Pricing strategy',
-        feature3: 'Revenue streams'
+        title: 'modèles de revenus',
+        desc: 'construction de flux de revenus durables et rentables.',
+        feature1: 'monétisation',
+        feature2: 'pricing strategy',
+        feature3: 'revenue streams'
       },
       support: {
-        title: 'Accompagnement Opérationnel',
-        desc: 'Support concret dans l\'exécution de vos projets stratégiques.',
-        feature1: 'Mise en œuvre',
-        feature2: 'Suivi projet',
-        feature3: 'Formation équipes'
+        title: 'accompagnement opérationnel',
+        desc: 'support concret dans l\'exécution de vos projets stratégiques.',
+        feature1: 'mise en œuvre',
+        feature2: 'suivi projet',
+        feature3: 'formation équipes'
       },
-      cta: 'En savoir plus',
+      cta: 'en savoir plus',
       final: {
-        title: 'Prêt à transformer votre business ?',
-        subtitle: 'Discutons de vos objectifs et découvrons ensemble comment nous pouvons vous accompagner vers le succès.',
-        cta: 'Planifier un entretien'
+        title: 'prêt à transformer votre business ?',
+        subtitle: 'discutons de vos objectifs et découvrons ensemble comment nous pouvons vous accompagner vers le succès.',
+        cta: 'planifier un entretien'
       }
     },
     contact: {
-      title: 'Contactez-nous',
-      subtitle: 'Prêt à transformer votre business ? Discutons de vos projets et objectifs.',
+      title: 'contactez-nous',
+      subtitle: 'prêt à transformer votre business ? discutons de vos projets et objectifs.',
       talk: {
-        title: 'Parlons de votre projet',
-        desc: 'Chaque projet est unique. Contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous accompagner.'
+        title: 'parlons de votre projet',
+        desc: 'chaque projet est unique. contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous accompagner.'
       },
       info: {
-        email: 'Email',
-        phone: 'Téléphone',
-        address: 'Adresse',
-        hours: 'Horaires',
-        hours: {
-          value: 'Lun-Ven : 9h-18h'
-        }
+        email: 'email',
+        phone: 'téléphone',
+        address: 'adresse',
+        hours: 'horaires',
+        hoursValue: 'lun-ven : 9h-18h'
       },
       form: {
-        title: 'Envoyez-nous un message',
-        name: 'Nom',
-        name: {
-          placeholder: 'Votre nom complet'
-        },
-        email: {
-          placeholder: 'votre@email.com'
-        },
-        company: 'Entreprise',
-        company: {
-          placeholder: 'Nom de votre entreprise'
-        },
-        message: 'Message',
-        message: {
-          placeholder: 'Décrivez votre projet ou vos besoins...'
-        },
-        send: 'Envoyer le message'
+        title: 'envoyez-nous un message',
+        name: 'nom',
+        namePlaceholder: 'votre nom complet',
+        emailPlaceholder: 'votre@email.com',
+        company: 'entreprise',
+        companyPlaceholder: 'nom de votre entreprise',
+        message: 'message',
+        messagePlaceholder: 'décrivez votre projet ou vos besoins...',
+        send: 'envoyer le message'
       },
       toast: {
-        title: 'Message envoyé !',
-        desc: 'Nous vous répondrons dans les plus brefs délais.'
+        title: 'message envoyé !',
+        desc: 'nous vous répondrons dans les plus brefs délais.'
       }
     }
   },
@@ -177,133 +168,123 @@ const translations = {
     },
     about: {
       title: {
-        prefix: 'About'
+        prefix: 'about'
       },
       expertise: {
-        title: 'Your expert in',
+        title: 'your expert in',
         highlight: 'business transformation'
       },
       description: {
-        first: 'With over 15 years of experience in strategic consulting, I support established companies and startups in their development.',
-        second: 'My holistic approach analyzes your organization to provide integrated and sustainable solutions.'
+        first: 'with over 15 years of experience in strategic consulting, I support established companies and startups in their development.',
+        second: 'my holistic approach analyzes your organization to provide integrated and sustainable solutions.'
       },
       mission: {
-        title: 'My mission',
-        desc: 'Transform your business challenges into sustainable competitive advantages.'
+        title: 'my mission',
+        desc: 'transform your business challenges into sustainable competitive advantages.'
       },
       values: {
         strategic: {
-          title: 'Strategic Consulting',
-          desc: 'Define your USP and brand positioning'
+          title: 'strategic consulting',
+          desc: 'define your USP and brand positioning'
         },
         operational: {
-          title: 'Hands-on Support',
-          desc: 'Concrete support in executing your projects'
+          title: 'hands-on support',
+          desc: 'concrete support in executing your projects'
         },
         expertise: {
-          title: 'Industry Expertise',
-          desc: 'Deep knowledge of retail and startups'
+          title: 'industry expertise',
+          desc: 'deep knowledge of retail and startups'
         }
       },
       stats: {
-        experience: 'Years of experience',
-        clients: 'Clients supported',
-        satisfaction: 'Satisfaction rate'
+        experience: 'years of experience',
+        clients: 'clients supported',
+        satisfaction: 'satisfaction rate'
       }
     },
     services: {
       title: {
-        prefix: 'Our',
-        highlight: 'Services'
+        prefix: 'our',
+        highlight: 'services'
       },
-      subtitle: 'Expert solutions to define your USP, positioning, and go-to-market strategies',
+      subtitle: 'expert solutions to define your USP, positioning, and go-to-market strategies',
       usp: {
-        title: 'USP Definition',
-        desc: 'Identify and formulate your unique value proposition to differentiate yourself.',
-        feature1: 'Competitive analysis',
-        feature2: 'Value proposition',
-        feature3: 'Differentiation'
+        title: 'USP definition',
+        desc: 'identify and formulate your unique value proposition to differentiate yourself.',
+        feature1: 'competitive analysis',
+        feature2: 'value proposition',
+        feature3: 'differentiation'
       },
       positioning: {
-        title: 'Brand Positioning',
-        desc: 'Build a strong and coherent positioning for your brand in the market.',
-        feature1: 'Market research',
-        feature2: 'Brand strategy',
-        feature3: 'Messaging'
+        title: 'brand positioning',
+        desc: 'build a strong and coherent positioning for your brand in the market.',
+        feature1: 'market research',
+        feature2: 'brand strategy',
+        feature3: 'messaging'
       },
       gtm: {
-        title: 'Go-to-Market Strategies',
-        desc: 'Develop effective launch and commercialization strategies.',
-        feature1: 'Launch plan',
-        feature2: 'Distribution channels',
-        feature3: 'Sales strategy'
+        title: 'go-to-market strategies',
+        desc: 'develop effective launch and commercialization strategies.',
+        feature1: 'launch plan',
+        feature2: 'distribution channels',
+        feature3: 'sales strategy'
       },
       retail: {
-        title: 'Retail Experience',
-        desc: 'Optimize customer experience in-store and digitally.',
-        feature1: 'Customer journey',
-        feature2: 'Store experience',
-        feature3: 'Digital retail'
+        title: 'retail experience',
+        desc: 'optimize customer experience in-store and digitally.',
+        feature1: 'customer journey',
+        feature2: 'store experience',
+        feature3: 'digital retail'
       },
       revenue: {
-        title: 'Revenue Models',
-        desc: 'Build sustainable and profitable revenue streams.',
-        feature1: 'Monetization',
-        feature2: 'Pricing strategy',
-        feature3: 'Revenue streams'
+        title: 'revenue models',
+        desc: 'build sustainable and profitable revenue streams.',
+        feature1: 'monetization',
+        feature2: 'pricing strategy',
+        feature3: 'revenue streams'
       },
       support: {
-        title: 'Hands-on Support',
-        desc: 'Concrete support in executing your strategic projects.',
-        feature1: 'Implementation',
-        feature2: 'Project tracking',
-        feature3: 'Team training'
+        title: 'hands-on support',
+        desc: 'concrete support in executing your strategic projects.',
+        feature1: 'implementation',
+        feature2: 'project tracking',
+        feature3: 'team training'
       },
-      cta: 'Learn more',
+      cta: 'learn more',
       final: {
-        title: 'Ready to transform your business?',
-        subtitle: 'Let\'s discuss your objectives and discover together how we can support you towards success.',
-        cta: 'Schedule a consultation'
+        title: 'ready to transform your business?',
+        subtitle: 'let\'s discuss your objectives and discover together how we can support you towards success.',
+        cta: 'schedule a consultation'
       }
     },
     contact: {
-      title: 'Contact Us',
-      subtitle: 'Ready to transform your business? Let\'s discuss your projects and objectives.',
+      title: 'contact us',
+      subtitle: 'ready to transform your business? let\'s discuss your projects and objectives.',
       talk: {
-        title: 'Let\'s talk about your project',
-        desc: 'Every project is unique. Contact us to discuss your specific needs and discover how we can support you.'
+        title: 'let\'s talk about your project',
+        desc: 'every project is unique. contact us to discuss your specific needs and discover how we can support you.'
       },
       info: {
-        email: 'Email',
-        phone: 'Phone',
-        address: 'Address',
-        hours: 'Hours',
-        hours: {
-          value: 'Mon-Fri: 9AM-6PM'
-        }
+        email: 'email',
+        phone: 'phone',
+        address: 'address',
+        hours: 'hours',
+        hoursValue: 'mon-fri: 9AM-6PM'
       },
       form: {
-        title: 'Send us a message',
-        name: 'Name',
-        name: {
-          placeholder: 'Your full name'
-        },
-        email: {
-          placeholder: 'your@email.com'
-        },
-        company: 'Company',
-        company: {
-          placeholder: 'Your company name'
-        },
-        message: 'Message',
-        message: {
-          placeholder: 'Describe your project or needs...'
-        },
-        send: 'Send message'
+        title: 'send us a message',
+        name: 'name',
+        namePlaceholder: 'your full name',
+        emailPlaceholder: 'your@email.com',
+        company: 'company',
+        companyPlaceholder: 'your company name',
+        message: 'message',
+        messagePlaceholder: 'describe your project or needs...',
+        send: 'send message'
       },
       toast: {
-        title: 'Message sent!',
-        desc: 'We will get back to you as soon as possible.'
+        title: 'message sent!',
+        desc: 'we will get back to you as soon as possible.'
       }
     }
   }
