@@ -16,7 +16,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Détection de la section active
-      const sections = ['accueil', 'expertise', 'services', 'apropos'];
+      const sections = ['accueil', 'apropos', 'services', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -46,9 +46,8 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'expertise', label: t('nav.industry') },
-    { id: 'services', label: t('nav.services') },
-    { id: 'apropos', label: t('nav.about') }
+    { id: 'apropos', label: t('nav.about') },
+    { id: 'services', label: t('nav.services') }
   ];
 
   return (
