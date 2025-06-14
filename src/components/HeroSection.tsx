@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -98,4 +97,3 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 };
 
 export default HeroSection;
-
