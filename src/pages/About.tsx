@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -32,7 +30,7 @@ const About = () => {
                 alt="Trail running - dépassement de soi"
                 className="w-full h-auto rounded-sm shadow-lg object-cover object-center"
                 style={{
-                  clipPath: 'inset(25% 0 25% 0)'
+                  clipPath: 'inset(0% 0 25% 0)'
                 }}
               />
             </div>
@@ -120,4 +118,3 @@ const About = () => {
 };
 
 export default About;
-
