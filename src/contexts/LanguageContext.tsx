@@ -11,9 +11,9 @@ interface LanguageContextType {
 const translations = {
   fr: {
     nav: {
-      industry: 'industry expertise',
+      industry: 'expertise industry',
       services: 'business services',
-      about: 'about',
+      about: 'à propos',
       blog: 'blog',
       talk: 'parlons-nous'
     },
