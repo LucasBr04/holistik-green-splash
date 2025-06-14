@@ -80,14 +80,13 @@ const Navigation = () => {
               />
             </div>
             <span
-              className="text-lg sm:text-xl font-holistik"
+              className="text-lg sm:text-xl font-holistik tracking-holistik-tight"
               style={{
                 color: '#3b7d23',
                 fontWeight: 400,
-                letterSpacing: '0.05em',
                 textTransform: 'lowercase',
                 fontStyle: 'normal',
-                lineHeight: 1
+                lineHeight: 0.85
               }}
             >
               holistik consulting

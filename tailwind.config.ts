@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -162,6 +161,7 @@ export default {
 			letterSpacing: {
 				tight: '-0.025em',
 				wide: '0.025em',
+				'holistik-tight': '-0.01em',
 			}
 		}
 	},
