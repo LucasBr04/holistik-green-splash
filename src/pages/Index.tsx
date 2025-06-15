@@ -4,6 +4,7 @@ import LoadingAnimation from '@/components/LoadingAnimation';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import IndustrySection from '@/components/IndustrySection';
 import ServicesSection from '@/components/ServicesSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
@@ -40,10 +41,11 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <HeroSection onContactClick={scrollToContact} />
       <AboutSection />
+      <IndustrySection onContactClick={scrollToContact} />
       <ServicesSection onContactClick={scrollToContact} />
       <ContactSection />
       <Footer />

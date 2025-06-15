@@ -18,7 +18,7 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Détection de la section active seulement sur la page d'accueil
+      // Active section detection only on homepage
       if (location.pathname === '/') {
         const sections = ['accueil', 'industry', 'services'];
         const scrollPosition = window.scrollY + 100;
@@ -43,7 +43,7 @@ const Navigation = () => {
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {
-    // Si on n'est pas sur la page d'accueil, y aller d'abord
+    // If not on homepage, navigate there first
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => {
@@ -67,8 +67,8 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: '/industry', label: t('nav.industry'), type: 'route' },
-    { id: 'services', label: t('nav.services'), type: 'section' },
+    { id: 'industry', label: 'expertise sectorielle', type: 'section' },
+    { id: 'services', label: 'conseil et services', type: 'section' },
     { id: '/about', label: t('nav.about'), type: 'route' }
   ];
 
@@ -80,7 +80,7 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
         <div className="flex items-center justify-between">
-          {/* Logo avec fonctionnalité home */}
+          {/* Logo with home functionality */}
           <div className="flex items-center space-x-3 sm:space-x-4 group cursor-pointer" onClick={() => handleNavigation('/')}>
             <div className="relative">
               <img 
@@ -103,7 +103,7 @@ const Navigation = () => {
             </span>
           </div>
           
-          {/* Navigation avec les 3 sections traduites */}
+          {/* Navigation menu */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {menuItems.map((item) => (
               <Button 
@@ -144,7 +144,7 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu avec les 3 sections traduites */}
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-6 sm:mt-8 bg-white/98 backdrop-blur-xl rounded-lg shadow-lg border border-gray-100 p-6 sm:p-8">
             <div className="flex flex-col space-y-4 sm:space-y-6">
