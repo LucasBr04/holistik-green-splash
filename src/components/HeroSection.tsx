@@ -96,14 +96,6 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           </div>
         </div>
       </div>
-
-      {/* Indicateur de scroll minimal */}
-      <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2">
-        <div className="flex flex-col items-center">
-          <div className="w-px h-12 sm:h-16 bg-gradient-to-b from-holistik-primary/50 to-transparent"></div>
-          <div className="w-2 h-2 bg-holistik-primary rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
     </section>
   );
 };
