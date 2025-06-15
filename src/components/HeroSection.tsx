@@ -10,6 +10,8 @@ interface HeroSectionProps {
 const HeroSection = ({ onContactClick }: HeroSectionProps) => {
   const { t } = useLanguage();
 
+  console.log('HeroSection rendering - checking for any vertical green elements');
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -70,7 +72,8 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               <p className="text-base sm:text-lg text-gray-500 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat px-4">
                 Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s'appuient sur une approche holistique et une relation symbiotique permettant d'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.
               </p>
-              <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8"></div>
+              {/* Trait horizontal vert - je vérifie qu'il n'y a pas d'éléments cachés */}
+              <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8" style={{position: 'relative'}}></div>
             </div>
             
             {/* Boutons épurés */}

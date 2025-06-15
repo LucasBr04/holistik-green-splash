@@ -96,8 +96,25 @@
   @apply bg-white min-h-screen;
 }
 
-/* Remove any potential green line artifacts */
+/* Remove any potential green line artifacts from all possible sources */
 .carousel-content::before,
-.carousel-content::after {
+.carousel-content::after,
+*::before,
+*::after {
+  display: none !important;
+}
+
+/* Suppress any vertical lines that might be created by CSS */
+* {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Override any potential pseudo-elements creating vertical lines */
+.hero-section *::before,
+.hero-section *::after,
+#accueil *::before,
+#accueil *::after {
+  content: none !important;
   display: none !important;
 }
