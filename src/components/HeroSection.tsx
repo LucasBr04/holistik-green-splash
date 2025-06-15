@@ -76,24 +76,15 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8" style={{position: 'relative'}}></div>
             </div>
             
-            {/* Boutons épurés */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
+            {/* Bouton unique - seul "découvrir nos services" */}
+            <div className="flex justify-center px-4">
               <Button 
                 size="lg" 
                 onClick={() => scrollToSection('services')}
-                className="bg-holistik-primary hover:bg-gray-900 text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase w-full sm:w-auto"
+                className="bg-holistik-primary hover:bg-gray-900 text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
               >
                 {t('hero.discover')}
                 <ArrowRight className="ml-2 sm:ml-3 h-4 w-4" />
-              </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={onContactClick}
-                className="border border-gray-300 text-gray-700 hover:bg-gray-50 px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-light tracking-wide transition-all duration-500 font-montserrat lowercase w-full sm:w-auto"
-              >
-                {t('hero.contact')}
               </Button>
             </div>
           </div>
