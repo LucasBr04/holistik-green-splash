@@ -64,20 +64,20 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
 
   return (
     <section id="services" className="py-16 sm:py-24 bg-gray-50 relative overflow-hidden">
-      {/* Background elements consistent with other sections */}
+      {/* Background elements consistent with IndustrySection */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-holistik-primary/5 rounded-full blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-holistik-primary/3 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header - consistent with IndustrySection */}
+        {/* Section Header - exact same style as IndustrySection */}
         <div className="text-center mb-16 sm:mb-20">
           <div className="mb-8 flex justify-center">
             <img 
               src="/lovable-uploads/e6dc1785-66ee-46be-b1fd-8b8e3f356cdd.png" 
               alt="holistik consulting logo" 
-              className="h-12 w-12 sm:h-16 sm:w-16 animate-spin-with-pause" 
+              className="h-12 w-12 sm:h-16 sm:w-16" 
             />
           </div>
           
@@ -100,92 +100,60 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
           <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-8"></div>
         </div>
 
-        {/* Services Carousel */}
-        <div className="max-w-7xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-4">
-              {services.map((service, index) => {
-                const IconComponent = service.icon;
-                return (
-                  <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                    <div className="group h-full">
-                      <div className="relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 lg:p-8 h-full border border-gray-100 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-500 overflow-hidden">
-                        {/* Background gradient */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-                        
-                        {/* Icon */}
-                        <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                          <IconComponent className="h-7 w-7 text-white" />
-                        </div>
-                        
-                        {/* Content */}
-                        <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 group-hover:text-holistik-primary transition-colors duration-300 font-montserrat">
-                          {service.title}
-                        </h3>
-                        
-                        <p className="text-gray-600 mb-6 leading-relaxed font-montserrat text-sm lg:text-base">
-                          {service.description}
-                        </p>
-                        
-                        {/* Features */}
-                        <div className="space-y-3 mb-8">
-                          {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center">
-                              <CheckCircle className="h-4 w-4 text-holistik-primary mr-3 flex-shrink-0" />
-                              <span className="text-gray-700 font-medium text-sm font-montserrat">{feature}</span>
-                            </div>
-                          ))}
-                        </div>
-                        
-                        {/* Action button */}
-                        <Button 
-                          onClick={onContactClick}
-                          className={`w-full bg-gradient-to-r ${service.color} hover:shadow-lg text-white font-medium py-3 rounded-xl transform hover:scale-105 transition-all duration-300 font-montserrat text-sm`}
-                        >
-                          {t('services.cta')}
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </div>
+        {/* Services Grid - harmonized with IndustrySection style */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-16">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div key={index} className="group h-full">
+                <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 lg:p-8 h-full border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-500">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-holistik-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-holistik-primary/20 transition-colors duration-300">
+                      <IconComponent className="h-8 w-8 text-holistik-primary" />
                     </div>
-                  </CarouselItem>
-                );
-              })}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 w-12 h-12 border-2 border-holistik-primary text-holistik-primary hover:bg-holistik-primary hover:text-white" />
-            <CarouselNext className="hidden md:flex -right-12 w-12 h-12 border-2 border-holistik-primary text-holistik-primary hover:bg-holistik-primary hover:text-white" />
-          </Carousel>
+                    
+                    <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-4 font-montserrat">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 leading-relaxed font-montserrat text-sm lg:text-base">
+                      {service.description}
+                    </p>
+                    
+                    {/* Features */}
+                    <div className="space-y-3 mb-8">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center justify-center">
+                          <CheckCircle className="h-4 w-4 text-holistik-primary mr-3 flex-shrink-0" />
+                          <span className="text-gray-700 font-medium text-sm font-montserrat">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Action button - same style as IndustrySection */}
+                    <Button 
+                      onClick={onContactClick}
+                      className="bg-holistik-primary hover:bg-gray-900 text-white px-6 py-2 text-sm font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
+                    >
+                      {t('services.cta')}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16 sm:mt-20">
-          <div className="bg-gradient-to-r from-holistik-primary to-holistik-secondary rounded-2xl p-8 lg:p-12 shadow-xl transform hover:scale-105 transition-all duration-500">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-holistik text-white mb-6"
-                style={{
-                  fontWeight: 400,
-                  textTransform: 'lowercase',
-                  fontStyle: 'normal',
-                  lineHeight: 0.85
-                }}>
-              prêt à transformer votre entreprise ?
-            </h3>
-            <p className="text-white/90 text-lg sm:text-xl mb-8 max-w-2xl mx-auto font-montserrat font-light">
-              découvrons ensemble comment notre expertise peut vous accompagner vers le succès
-            </p>
-            <Button 
-              size="lg"
-              onClick={onContactClick}
-              className="bg-white text-holistik-primary hover:bg-gray-100 px-8 lg:px-12 py-3 lg:py-4 text-base lg:text-lg rounded-xl font-medium shadow-xl hover:shadow-2xl transform hover:scale-110 transition-all duration-300 font-montserrat lowercase"
-            >
-              parlons de votre projet
-              <ArrowRight className="ml-3 h-5 w-5" />
-            </Button>
-          </div>
+        <div className="text-center">
+          <Button 
+            onClick={onContactClick}
+            className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-base font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
+          >
+            parlons de votre projet
+            <ArrowRight className="ml-3 h-4 w-4" />
+          </Button>
         </div>
       </div>
     </section>

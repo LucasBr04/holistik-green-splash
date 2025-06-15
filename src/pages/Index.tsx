@@ -10,10 +10,14 @@ import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+    // Only show loading animation on first visit
+    return !sessionStorage.getItem('hasVisited');
+  });
 
   const handleLoadingComplete = () => {
     setLoading(false);
+    sessionStorage.setItem('hasVisited', 'true');
   };
 
   const scrollToContact = () => {
