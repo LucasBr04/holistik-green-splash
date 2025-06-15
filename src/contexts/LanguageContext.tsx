@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 export type Language = 'fr' | 'en';
@@ -67,7 +65,7 @@ const translations = {
     aboutPage: {
       hero: {
         title: 'je vis pleinement l\'aventure, tant sur le plan professionnel que personnel',
-        subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'excellence opérationnelle'
+        subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'exécution opérationnelle'
       },
       experience: {
         title: 'un parcours international d\'exception',
@@ -89,7 +87,7 @@ const translations = {
         },
         skills: {
           title: 'compétences transférables',
-          desc: 'se connaître, comprendre les risques, être attentif aux signaux, être agile, résilient et déterminé sont des leçons du trail applicables au monde professionnel.'
+          desc: 'se connaître, comprendre les risques, être attentif aux signaux, être agile, résilient et déterminé sont des leçons du trail running applicables au monde professionnel.'
         }
       }
     },
@@ -240,7 +238,7 @@ const translations = {
     aboutPage: {
       hero: {
         title: 'I live adventures to the fullest on both professional and personal sides',
-        subtitle: 'over 25 years of international management experience, from brand strategy to operational excellence'
+        subtitle: 'over 25 years of international management experience, from brand strategy to operational execution'
       },
       experience: {
         title: 'exceptional international journey',
