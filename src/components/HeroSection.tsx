@@ -1,6 +1,4 @@
 
-
-
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -60,10 +58,17 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
               </h1>
             </div>
             
-            {/* Sous-titre repositionné */}
-            <div className="mb-12 sm:mb-16">
+            {/* Sous-titre modifié */}
+            <div className="mb-8 sm:mb-10">
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto font-montserrat px-4">
-                {t('hero.subtitle')}
+                conseil en stratégie, management d'entreprise, développement de marque, et accompagnement opérationnel
+              </p>
+            </div>
+
+            {/* Nouveau texte descriptif */}
+            <div className="mb-12 sm:mb-16">
+              <p className="text-base sm:text-lg text-gray-500 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat px-4">
+                Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s'appuient sur une approche holistique et une relation symbiotique permettant d'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.
               </p>
               <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8"></div>
             </div>
@@ -104,5 +109,3 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 };
 
 export default HeroSection;
-
-
