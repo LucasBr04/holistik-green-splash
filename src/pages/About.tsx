@@ -26,12 +26,9 @@ const About = () => {
             
             <div className="relative">
               <img 
-                src="/lovable-uploads/0ca04ceb-571e-444b-ad5e-1d37df373f49.png"
+                src="/lovable-uploads/cb673273-1171-4d8f-9b40-5c6a9f752eca.png"
                 alt="Trail running - dépassement de soi"
                 className="w-full h-auto rounded-sm shadow-lg object-cover object-center"
-                style={{
-                  clipPath: 'inset(0% 0 25% 0)'
-                }}
               />
             </div>
           </div>
