@@ -68,11 +68,11 @@ const IndustrySection = ({ onContactClick }: IndustrySectionProps) => {
                 lineHeight: 0.60,
                 letterSpacing: '-0.01em'
               }}>
-            expertise sectorielle
+            {t('nav.industry')}
           </h2>
           
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat">
-            des solutions expertes adaptées à votre secteur d'activité, de la stratégie à l'exécution opérationnelle
+            {t('industry.subtitle')}
           </p>
           
           <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-8"></div>
