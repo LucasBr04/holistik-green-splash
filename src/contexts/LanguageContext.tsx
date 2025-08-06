@@ -22,7 +22,8 @@ const translations = {
         holistik: 'holistik',
         consulting: 'consulting'
       },
-      subtitle: 'conseil stratégique et accompagnement opérationnel pour définir votre USP, positionnement de marque, stratégies go-to-market et expérience retail',
+      subtitle: 'conseil en stratégie, management d\'entreprise, développement de marque, et accompagnement opérationnel',
+      description: 'Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s\'appuient sur une approche holistique et une relation symbiotique permettant d\'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.',
       discover: 'découvrir nos services',
       contact: 'nous contacter'
     },
@@ -195,7 +196,8 @@ const translations = {
         holistik: 'holistik',
         consulting: 'consulting'
       },
-      subtitle: 'strategic and management consulting with hands-on business support for USP, brand positioning, go-to-market strategies and retail experience',
+      subtitle: 'strategic consulting, business management, brand development, and operational support',
+      description: 'In a constantly evolving environment, our agility, creativity and commitment are based on a holistic approach and a symbiotic relationship enabling us to provide concrete solutions with high added value, while integrating the resources at our disposal.',
       discover: 'discover our services',
       contact: 'contact us'
     },

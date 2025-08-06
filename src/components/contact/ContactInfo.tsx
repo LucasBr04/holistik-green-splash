@@ -10,8 +10,8 @@ const ContactInfo = () => {
     {
       icon: <Mail className="h-6 w-6 text-holistik-primary" />,
       title: t('contact.info.email'),
-      content: "o.brunschwick@holistik-consulting.com",
-      action: "mailto:o.brunschwick@holistik-consulting.com"
+      content: "info@holistik-consulting.com",
+      action: "mailto:info@holistik-consulting.com"
     },
     {
       icon: <Phone className="h-6 w-6 text-holistik-primary" />,
@@ -23,12 +23,6 @@ const ContactInfo = () => {
       icon: <MapPin className="h-6 w-6 text-holistik-primary" />,
       title: t('contact.info.address'),
       content: "genève, suisse",
-      action: null
-    },
-    {
-      icon: <Clock className="h-6 w-6 text-holistik-primary" />,
-      title: t('contact.info.hours'),
-      content: t('contact.info.hoursValue'),
       action: null
     }
   ];

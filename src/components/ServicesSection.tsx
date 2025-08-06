@@ -87,7 +87,7 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
                 fontWeight: 400,
                 textTransform: 'lowercase',
                 fontStyle: 'normal',
-                lineHeight: 0.85,
+                lineHeight: 0.40,
                 letterSpacing: '-0.01em'
               }}>
             conseil et services
