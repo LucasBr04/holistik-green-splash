@@ -178,9 +178,43 @@ const translations = {
       }
     },
     blog: {
-      subtitle: 'insights and expertise in business transformation and go-to-market strategies',
-      loadMore: 'load more articles',
-      readMore: 'read more'
+      subtitle: 'insights et expertise en transformation business et stratégies go-to-market',
+      loadMore: 'charger plus d\'articles',
+      readMore: 'lire la suite',
+      loading: 'chargement des posts LinkedIn...',
+      error: 'erreur lors du chargement des posts',
+      retry: 'réessayer',
+      noPosts: 'aucun post LinkedIn trouvé. synchronisez vos posts pour les afficher ici.',
+      refresh: 'actualiser'
+    },
+    industry: {
+      subtitle: 'des solutions expertes adaptées à votre secteur d\'activité, de la stratégie à l\'exécution opérationnelle',
+      0: {
+        title: 'FMCG et produits de consommation',
+        description: 'accompagnement des marques FMCG dans leur stratégie de croissance, optimisation des circuits de distribution, développement de nouveaux produits et expansion internationale.'
+      },
+      1: {
+        title: 'maisons de luxe et écosystème horloger',
+        description: 'expertise dans l\'univers du luxe et de l\'horlogerie, de la stratégie de marque premium à l\'expérience client exclusive, en passant par le retail de prestige.'
+      },
+      2: {
+        title: 'produits technologiques',
+        description: 'conseil stratégique pour les entreprises tech, go-to-market de produits innovants, transformation digitale et développement d\'écosystèmes technologiques.'
+      },
+      3: {
+        title: 'banque privée et gestion d\'actifs',
+        description: 'accompagnement des institutions financières dans leur stratégie client, développement de services premium et optimisation de l\'expérience client fortuné.'
+      },
+      4: {
+        title: 'entrepreneurs et start-ups',
+        description: 'mentoring et conseil stratégique pour entrepreneurs, structuration de business models, levées de fonds et accélération de croissance.'
+      },
+      cta: 'en savoir plus',
+      ctaSection: {
+        title: 'prêt à transformer votre secteur ?',
+        subtitle: 'découvrons ensemble comment notre expertise peut vous accompagner vers le succès',
+        button: 'parlons de votre projet'
+      }
     }
   },
   en: {
@@ -354,7 +388,41 @@ const translations = {
     blog: {
       subtitle: 'insights and expertise in business transformation and go-to-market strategies',
       loadMore: 'load more articles',
-      readMore: 'read more'
+      readMore: 'read more',
+      loading: 'loading LinkedIn posts...',
+      error: 'error loading posts',
+      retry: 'retry',
+      noPosts: 'no LinkedIn posts found. synchronize your posts to display them here.',
+      refresh: 'refresh'
+    },
+    industry: {
+      subtitle: 'expert solutions tailored to your industry, from strategy to operational execution',
+      0: {
+        title: 'FMCG and consumer products',
+        description: 'support FMCG brands in their growth strategy, distribution channel optimization, new product development and international expansion.'
+      },
+      1: {
+        title: 'luxury maisons and watchmaking ecosystem',
+        description: 'expertise in luxury and watchmaking universe, from premium brand strategy to exclusive customer experience, including prestige retail.'
+      },
+      2: {
+        title: 'tech products',
+        description: 'strategic consulting for tech companies, go-to-market for innovative products, digital transformation and technology ecosystem development.'
+      },
+      3: {
+        title: 'private banking & asset management',
+        description: 'support financial institutions in their client strategy, premium service development and high-net-worth client experience optimization.'
+      },
+      4: {
+        title: 'entrepreneurs and start-ups',
+        description: 'mentoring and strategic consulting for entrepreneurs, business model structuring, fundraising and growth acceleration.'
+      },
+      cta: 'learn more',
+      ctaSection: {
+        title: 'ready to transform your industry?',
+        subtitle: 'let\'s discover together how our expertise can support you towards success',
+        button: 'let\'s talk about your project'
+      }
     }
   }
 };

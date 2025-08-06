@@ -39,7 +39,7 @@ const Blog = () => {
         <BlogHeader />
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-gray-600 font-montserrat">Chargement des posts LinkedIn...</p>
+            <p className="text-gray-600 font-montserrat">{t('blog.loading')}</p>
           </div>
         </div>
         <Footer />
@@ -54,10 +54,10 @@ const Blog = () => {
         <BlogHeader />
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p className="text-red-600 font-montserrat mb-4">Erreur lors du chargement des posts</p>
+            <p className="text-red-600 font-montserrat mb-4">{t('blog.error')}</p>
             <Button onClick={handleRefresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
-              Réessayer
+              {t('blog.retry')}
             </Button>
           </div>
         </div>
@@ -75,11 +75,11 @@ const Blog = () => {
         <div className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p className="text-gray-600 font-montserrat mb-4">
-              Aucun post LinkedIn trouvé. Synchronisez vos posts pour les afficher ici.
+              {t('blog.noPosts')}
             </p>
             <Button onClick={handleRefresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
-              Actualiser
+              {t('blog.refresh')}
             </Button>
           </div>
         </div>

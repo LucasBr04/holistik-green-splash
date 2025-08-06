@@ -78,14 +78,14 @@ const Industry = () => {
                   fontWeight: 400,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
-                  lineHeight: 0.85,
+                  lineHeight: 0.40,
                   letterSpacing: '-0.02em'
                 }}>
-              expertise sectorielle
+              {t('nav.industry')}
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto font-montserrat">
-              des solutions expertes adaptées à votre secteur d'activité, de la stratégie à l'exécution opérationnelle
+              {t('industry.subtitle')}
             </p>
             
             <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-8"></div>
@@ -109,11 +109,11 @@ const Industry = () => {
                     
                     <div className="flex-1">
                       <h3 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-4 font-montserrat">
-                        {industry.titleFr}
+                        {t(`industry.${index}.title`)}
                       </h3>
                       
                       <p className="text-gray-600 leading-relaxed font-montserrat text-sm lg:text-base mb-6">
-                        {industry.descriptionFr}
+                        {t(`industry.${index}.description`)}
                       </p>
                       
                       <Button 
@@ -121,7 +121,7 @@ const Industry = () => {
                         className="text-holistik-primary hover:text-gray-900 hover:bg-transparent p-0 font-montserrat font-medium group/button"
                         onClick={scrollToContact}
                       >
-                        en savoir plus
+                        {t('industry.cta')}
                         <ArrowRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 transition-transform duration-200" />
                       </Button>
                     </div>
@@ -143,13 +143,13 @@ const Industry = () => {
                   fontWeight: 400,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
-                  lineHeight: 0.85
+                  lineHeight: 0.40
                 }}>
-              prêt à transformer votre secteur ?
+              {t('industry.ctaSection.title')}
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-600 font-light tracking-wide leading-relaxed mb-8 font-montserrat">
-              découvrons ensemble comment notre expertise peut vous accompagner vers le succès
+              {t('industry.ctaSection.subtitle')}
             </p>
             
             <Button 
@@ -157,7 +157,7 @@ const Industry = () => {
               onClick={scrollToContact}
               className="bg-holistik-primary hover:bg-gray-900 text-white px-10 py-4 text-base font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
             >
-              parlons de votre projet
+              {t('industry.ctaSection.button')}
               <ArrowRight className="ml-3 h-4 w-4" />
             </Button>
           </div>
