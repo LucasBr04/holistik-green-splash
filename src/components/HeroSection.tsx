@@ -52,7 +52,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
                   fontWeight: 400,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
-                  lineHeight: 0.40,
+                  lineHeight: 0.60,
                   letterSpacing: '-0.02em'
                 }}
               >
@@ -63,14 +63,14 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             {/* Sous-titre modifié */}
             <div className="mb-8 sm:mb-10">
               <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto font-montserrat px-4">
-                {t('hero.subtitle')}
+                conseil en stratégie, management d'entreprise, développement de marque, et accompagnement opérationnel
               </p>
             </div>
 
             {/* Nouveau texte descriptif */}
             <div className="mb-12 sm:mb-16">
               <p className="text-base sm:text-lg text-gray-500 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat px-4">
-                {t('hero.description')}
+                Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s'appuient sur une approche holistique et une relation symbiotique permettant d'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.
               </p>
               {/* Trait horizontal vert - je vérifie qu'il n'y a pas d'éléments cachés */}
               <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8" style={{position: 'relative'}}></div>

@@ -65,7 +65,7 @@ const IndustrySection = ({ onContactClick }: IndustrySectionProps) => {
                 fontWeight: 400,
                 textTransform: 'lowercase',
                 fontStyle: 'normal',
-                lineHeight: 0.40,
+                lineHeight: 0.60,
                 letterSpacing: '-0.01em'
               }}>
             expertise sectorielle
