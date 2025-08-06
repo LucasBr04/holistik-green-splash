@@ -186,7 +186,7 @@ const translations = {
   en: {
     nav: {
       industry: 'industry expertise',
-      services: 'business services', 
+      services: 'consulting & services', 
       about: 'about',
       blog: 'blog',
       talk: 'let\'s talk'
@@ -314,7 +314,7 @@ const translations = {
         feature2: 'project tracking',
         feature3: 'team training'
       },
-      cta: 'learn more',
+      
       final: {
         title: 'ready to transform your business?',
         subtitle: 'let\'s discuss your objectives and discover together how we can support you towards success.',

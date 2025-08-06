@@ -130,14 +130,6 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
                       ))}
                     </div>
                     
-                    {/* Action button - same style as IndustrySection */}
-                    <Button 
-                      onClick={onContactClick}
-                      className="bg-holistik-primary hover:bg-gray-900 text-white px-6 py-2 text-sm font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
-                    >
-                      {t('services.cta')}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
                   </div>
                 </div>
               </div>

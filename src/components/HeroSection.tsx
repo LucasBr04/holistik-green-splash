@@ -52,7 +52,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
                   fontWeight: 400,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
-                  lineHeight: 0.60,
+                  lineHeight: 0.40,
                   letterSpacing: '-0.02em'
                 }}
               >
