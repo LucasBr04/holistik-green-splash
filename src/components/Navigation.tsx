@@ -67,8 +67,8 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { id: 'industry', label: 'expertise sectorielle', type: 'section' },
-    { id: 'services', label: 'conseil et services', type: 'section' },
+    { id: 'industry', label: t('nav.industry'), type: 'section' },
+    { id: 'services', label: t('nav.services'), type: 'section' },
     { id: '/about', label: t('nav.about'), type: 'route' }
   ];
 
