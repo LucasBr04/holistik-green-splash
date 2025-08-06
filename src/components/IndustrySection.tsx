@@ -15,28 +15,28 @@ const IndustrySection = ({ onContactClick }: IndustrySectionProps) => {
   const industries = [
     {
       icon: Package,
-      title: 'FMCG et Produits de Consommation',
-      description: 'Accompagnement des marques FMCG dans leur stratégie de croissance, optimisation des circuits de distribution, développement de nouveaux produits et expansion internationale.'
+      title: t('industry.0.title'),
+      description: t('industry.0.description')
     },
     {
       icon: Crown,
-      title: 'Maisons de Luxe et Écosystème Horloger',
-      description: 'Expertise dans l\'univers du luxe et de l\'horlogerie, de la stratégie de marque premium à l\'expérience client exclusive, en passant par le retail de prestige.'
+      title: t('industry.1.title'),
+      description: t('industry.1.description')
     },
     {
       icon: Smartphone,
-      title: 'Produits Technologiques',
-      description: 'Conseil stratégique pour les entreprises tech, go-to-market de produits innovants, transformation digitale et développement d\'écosystèmes technologiques.'
+      title: t('industry.2.title'),
+      description: t('industry.2.description')
     },
     {
       icon: Banknote,
-      title: 'Banque Privée et Gestion d\'Actifs',
-      description: 'Accompagnement des institutions financières dans leur stratégie client, développement de services premium et optimisation de l\'expérience client fortuné.'
+      title: t('industry.3.title'),
+      description: t('industry.3.description')
     },
     {
       icon: Briefcase,
-      title: 'Entrepreneurs et Start-ups',
-      description: 'Mentoring et conseil stratégique pour entrepreneurs, structuration de business models, levées de fonds et accélération de croissance.'
+      title: t('industry.4.title'),
+      description: t('industry.4.description')
     }
   ];
 
