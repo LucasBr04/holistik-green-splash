@@ -10,19 +10,19 @@ const ContactInfo = () => {
     {
       icon: <Mail className="h-6 w-6 text-holistik-primary" />,
       title: t('contact.info.email'),
-      content: "contact@holistik-consulting.fr",
-      action: "mailto:contact@holistik-consulting.fr"
+      content: "o.brunschwick@holistik-consulting.com",
+      action: "mailto:o.brunschwick@holistik-consulting.com"
     },
     {
       icon: <Phone className="h-6 w-6 text-holistik-primary" />,
       title: t('contact.info.phone'),
-      content: "+33 1 23 45 67 89",
-      action: "tel:+33123456789"
+      content: "+41 79 521 67 61",
+      action: "tel:+41795216761"
     },
     {
       icon: <MapPin className="h-6 w-6 text-holistik-primary" />,
       title: t('contact.info.address'),
-      content: "paris, france",
+      content: "genève, suisse",
       action: null
     },
     {
