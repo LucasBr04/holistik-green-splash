@@ -49,7 +49,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 font-century-gothic"
                 style={{
                   color: '#3b7d23',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
                   lineHeight: 0.40,

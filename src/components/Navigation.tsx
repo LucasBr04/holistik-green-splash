@@ -93,7 +93,7 @@ const Navigation = () => {
               className="text-lg sm:text-xl font-holistik tracking-holistik-tight"
               style={{
                 color: '#3b7d23',
-                fontWeight: 400,
+                fontWeight: 200,
                 textTransform: 'lowercase',
                 fontStyle: 'normal',
                 lineHeight: 0.85

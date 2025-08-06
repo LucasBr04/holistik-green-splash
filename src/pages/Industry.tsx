@@ -75,7 +75,7 @@ const Industry = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 font-holistik"
                 style={{
                   color: '#3b7d23',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
                   lineHeight: 0.40,
@@ -140,7 +140,7 @@ const Industry = () => {
             <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 font-holistik"
                 style={{
                   color: '#3b7d23',
-                  fontWeight: 400,
+                  fontWeight: 200,
                   textTransform: 'lowercase',
                   fontStyle: 'normal',
                   lineHeight: 0.40
