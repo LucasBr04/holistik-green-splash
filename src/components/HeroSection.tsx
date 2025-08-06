@@ -46,7 +46,7 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             {/* Titre principal avec style identique au logo */}
             <div className="mb-8 sm:mb-12">
               <h1
-                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 font-holistik"
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 font-century-gothic"
                 style={{
                   color: '#3b7d23',
                   fontWeight: 400,

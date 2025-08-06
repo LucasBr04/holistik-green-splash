@@ -81,7 +81,7 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
             />
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 font-holistik"
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-6 font-century-gothic"
               style={{
                 color: '#3b7d23',
                 fontWeight: 400,
