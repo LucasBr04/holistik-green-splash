@@ -90,11 +90,11 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
                 lineHeight: 0.60,
                 letterSpacing: '-0.01em'
               }}>
-            {t('nav.services')}
+            conseil et services
           </h2>
           
           <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat">
-            {t('services.subtitle')}
+            une approche holistique pour maximiser votre potentiel de croissance
           </p>
           
           <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-8"></div>
