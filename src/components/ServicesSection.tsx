@@ -143,7 +143,7 @@ const ServicesSection = ({ onContactClick }: ServicesSectionProps) => {
             onClick={onContactClick}
             className="bg-holistik-primary hover:bg-gray-900 text-white px-8 py-3 text-base font-light tracking-wide transition-all duration-500 border-0 font-montserrat lowercase"
           >
-            parlons de votre projet
+            {t('services.final.cta')}
             <ArrowRight className="ml-3 h-4 w-4" />
           </Button>
         </div>
