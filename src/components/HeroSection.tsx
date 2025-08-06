@@ -62,9 +62,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             
             {/* Sous-titre modifié */}
             <div className="mb-8 sm:mb-10">
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto font-montserrat px-4">
-                conseil en stratégie, management d'entreprise, développement de marque, et accompagnement opérationnel
-              </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light tracking-wide leading-relaxed max-w-3xl mx-auto font-montserrat px-4">
+              {t('hero.subtitle')}
+            </p>
             </div>
 
             {/* Nouveau texte descriptif */}
