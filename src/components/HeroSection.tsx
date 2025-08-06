@@ -69,9 +69,9 @@ const HeroSection = ({ onContactClick }: HeroSectionProps) => {
 
             {/* Nouveau texte descriptif */}
             <div className="mb-12 sm:mb-16">
-              <p className="text-base sm:text-lg text-gray-500 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat px-4">
-                Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s'appuient sur une approche holistique et une relation symbiotique permettant d'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.
-              </p>
+          <p className="text-base sm:text-lg text-gray-500 font-light tracking-wide leading-relaxed max-w-4xl mx-auto font-montserrat px-4">
+            {t('hero.description')}
+          </p>
               {/* Trait horizontal vert - je vérifie qu'il n'y a pas d'éléments cachés */}
               <div className="w-16 sm:w-24 h-px bg-holistik-primary mx-auto mt-6 sm:mt-8" style={{position: 'relative'}}></div>
             </div>
