@@ -66,7 +66,7 @@ const translations = {
     aboutPage: {
       hero: {
         title: 'vivre pleinement l\'aventure, tant sur le plan personnel que professionnel.',
-        subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'exécution opérationnelle'
+        subtitle: 'plus de 25 ans d\'expérience en management d\'équipes et de centre de profit au service de marques globales, de la stratégie à l\'exécution opérationnelle'
       },
       experience: {
         title: 'un parcours international et multi-sectoriel riche d\'enseignements',
