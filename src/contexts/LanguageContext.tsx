@@ -69,7 +69,7 @@ const translations = {
         subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'exécution opérationnelle'
       },
       experience: {
-        title: 'un parcours international d\'exception',
+        title: 'un parcours international et multi-sectoriel riche d\'enseignements',
         paragraph1: 'mon expérience couvre toute la chaîne de valeur, du développement de concept et du financement à l\'entrée sur le marché, la stratégie de croissance et l\'excellence opérationnelle.',
         paragraph2: 'dirigeant international, j\'ai mené des unités commerciales et des équipes fonctionnelles mondiales, avec plus de 25 ans d\'expérience en management général, ventes et marketing en Europe, aux États-Unis et en Chine.',
         identity: 'je me définis comme un CRÉATEUR DE MARQUES, DÉVELOPPEUR D\'AFFAIRES et CRÉATEUR D\'EXPÉRIENCES',
