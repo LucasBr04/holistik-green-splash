@@ -157,7 +157,7 @@ const translations = {
       info: {
         email: 'email',
         phone: 'téléphone',
-        address: 'Genève, Suisse',
+        address: 'adresse',
         hours: 'horaires',
         hoursValue: 'lun-ven : 9h-18h'
       },
@@ -369,7 +369,7 @@ const translations = {
       info: {
         email: 'email',
         phone: 'phone',
-        address: 'Geneva, Switzerland',
+        address: 'address',
         hours: 'hours',
         hoursValue: 'mon-fri: 9AM-6PM'
       },
