@@ -108,7 +108,7 @@ const translations = {
       positioning: {
         title: 'identité de marque',
         desc: 'construction d\'une identité forte et cohérente pour votre marque sur le marché.',
-        feature1: 'étude de marché',
+        feature1: 'étude de marché et perception',
         feature2: 'stratégie de marque',
         feature3: 'messaging'
       },
@@ -320,7 +320,7 @@ const translations = {
       positioning: {
         title: 'brand identity',
         desc: 'build a strong and coherent identity for your brand in the market.',
-        feature1: 'market research',
+        feature1: 'market research and perception',
         feature2: 'brand strategy',
         feature3: 'messaging'
       },
