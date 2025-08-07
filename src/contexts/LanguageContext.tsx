@@ -148,8 +148,8 @@ const translations = {
       }
     },
     contact: {
-      title: 'prêt à transformer votre business ?',
-      subtitle: 'discutons de vos projets et objectifs.',
+      title: 'Prêt à transformer votre business ?',
+      subtitle: 'Discutons de vos projets et objectifs.',
       talk: {
         title: 'parlons de votre projet',
         desc: 'chaque projet est unique. contactez-nous pour discuter de vos besoins spécifiques et découvrir comment nous pouvons vous accompagner.'
@@ -360,8 +360,8 @@ const translations = {
       }
     },
     contact: {
-      title: 'ready to transform your business?',
-      subtitle: 'let\'s discuss your projects and objectives.',
+      title: 'Ready to transform your business?',
+      subtitle: 'Let\'s discuss your projects and objectives.',
       talk: {
         title: 'let\'s talk about your project',
         desc: 'every project is unique. contact us to discuss your specific needs and discover how we can support you.'
