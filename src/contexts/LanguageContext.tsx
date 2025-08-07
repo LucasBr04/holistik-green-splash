@@ -103,11 +103,11 @@ const translations = {
         desc: 'identification et formulation de votre proposition de valeur unique pour vous différencier.',
         feature1: 'analyse concurrentielle',
         feature2: 'proposition de valeur',
-        feature3: 'clarification du positionnement'
+        feature3: 'clarification de l\'identité'
       },
       positioning: {
-        title: 'positionnement de marque',
-        desc: 'construction d\'un positionnement fort et cohérent pour votre marque sur le marché.',
+        title: 'identité de marque',
+        desc: 'construction d\'une identité forte et cohérente pour votre marque sur le marché.',
         feature1: 'étude de marché',
         feature2: 'stratégie de marque',
         feature3: 'messaging'
@@ -315,11 +315,11 @@ const translations = {
         desc: 'identify and formulate your unique value proposition to differentiate yourself.',
         feature1: 'competitive analysis',
         feature2: 'value proposition',
-        feature3: 'positioning clarification'
+        feature3: 'identity clarification'
       },
       positioning: {
-        title: 'brand positioning',
-        desc: 'build a strong and coherent positioning for your brand in the market.',
+        title: 'brand identity',
+        desc: 'build a strong and coherent identity for your brand in the market.',
         feature1: 'market research',
         feature2: 'brand strategy',
         feature3: 'messaging'
