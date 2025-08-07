@@ -135,7 +135,7 @@ const translations = {
       },
       support: {
         title: 'accompagnement opérationnel',
-        desc: 'support concret dans l\'exécution de vos projets stratégiques.',
+        desc: 'management et conduite de projet dans l\'exécution de vos projets stratégiques.',
         feature1: 'mise en œuvre',
         feature2: 'suivi projet',
         feature3: 'formation équipes'
@@ -347,7 +347,7 @@ const translations = {
       },
       support: {
         title: 'hands-on support',
-        desc: 'concrete support in executing your strategic projects.',
+        desc: 'project management and execution of your strategic projects.',
         feature1: 'implementation',
         feature2: 'project tracking',
         feature3: 'team training'
