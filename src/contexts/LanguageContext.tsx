@@ -195,7 +195,7 @@ const translations = {
       },
       1: {
         title: 'maisons de luxe et écosystème horloger',
-        description: 'expertise dans l\'univers du luxe et de l\'horlogerie, de la stratégie de marque premium à l\'expérience client exclusive, en passant par le retail de prestige.'
+        description: 'expertise dans l\'univers du luxe et de l\'horlogerie, de la stratégie de marque à l\'expérience client exclusive, en passant par le retail de prestige.'
       },
       2: {
         title: 'produits technologiques',
@@ -407,7 +407,7 @@ const translations = {
       },
       1: {
         title: 'luxury maisons and watchmaking ecosystem',
-        description: 'expertise in luxury and watchmaking universe, from premium brand strategy to exclusive customer experience, including prestige retail.'
+        description: 'expertise in luxury and watchmaking universe, from brand strategy to exclusive customer experience, including prestige retail.'
       },
       2: {
         title: 'tech products',
