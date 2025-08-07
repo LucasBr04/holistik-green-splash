@@ -129,9 +129,9 @@ const translations = {
       revenue: {
         title: 'modèles de revenus',
         desc: 'construction de flux de revenus durables et rentables.',
-        feature1: 'monétisation',
-        feature2: 'pricing strategy',
-        feature3: 'revenue streams'
+        feature1: 'suivi et évaluation des performances',
+        feature2: 'optimisation des canaux de vente',
+        feature3: 'stratégie de prix'
       },
       support: {
         title: 'accompagnement opérationnel',
@@ -341,9 +341,9 @@ const translations = {
       revenue: {
         title: 'revenue models',
         desc: 'build sustainable and profitable revenue streams.',
-        feature1: 'monetization',
-        feature2: 'pricing strategy',
-        feature3: 'revenue streams'
+        feature1: 'performance tracking and evaluation',
+        feature2: 'sales channel optimization',
+        feature3: 'pricing strategy'
       },
       support: {
         title: 'hands-on support',
