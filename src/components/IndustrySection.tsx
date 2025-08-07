@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Package, Crown, Smartphone, Banknote, Briefcase } from 'lucide-react';
+import { ArrowRight, Package, Crown, Smartphone, Banknote, Briefcase, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface IndustrySectionProps {
@@ -39,7 +39,7 @@ const IndustrySection = ({ onContactClick }: IndustrySectionProps) => {
       description: t('industry.4.description')
     },
     {
-      icon: Package,
+      icon: Users,
       title: t('industry.5.title'),
       description: t('industry.5.description')
     }
