@@ -122,9 +122,9 @@ const translations = {
       retail: {
         title: 'expérience retail',
         desc: 'optimisation de l\'expérience client en point de vente et digital.',
-        feature1: 'parcours client',
-        feature2: 'expérience magasin',
-        feature3: 'retail digital'
+        feature1: 'parcours client et retail media',
+        feature2: 'expérience omnicanale',
+        feature3: 'concept retail'
       },
       revenue: {
         title: 'modèles de revenus',
@@ -334,9 +334,9 @@ const translations = {
       retail: {
         title: 'retail experience',
         desc: 'optimize customer experience in-store and digitally.',
-        feature1: 'customer journey',
-        feature2: 'store experience',
-        feature3: 'digital retail'
+        feature1: 'customer journey and retail media',
+        feature2: 'omnichannel experience',
+        feature3: 'retail concept'
       },
       revenue: {
         title: 'revenue models',
