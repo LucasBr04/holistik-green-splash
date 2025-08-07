@@ -23,7 +23,7 @@ const translations = {
         consulting: 'consulting'
       },
       subtitle: 'conseil en stratégie, management d\'entreprise, développement de marque, et accompagnement opérationnel',
-      description: 'Dans un environnement en constante évolution, notre agilité, notre créativité et notre engagement s\'appuient sur une approche holistique et une relation symbiotique permettant d\'apporter des solutions concrètes à forte valeur ajoutée, tout en intégrant les ressources à disposition.',
+      description: 'Dans un environnement en constante mutation et hyper-compétitif, notre force réside dans l\'agilité, la créativité et l\'engagement. Grâce à une approche holistique, sur-mesure et collaborative, nous apportons des solutions à haute valeur ajoutée et à fort impact permettant à nos partenaires de se démarquer.',
       discover: 'découvrir nos services',
       contact: 'nous contacter'
     },
