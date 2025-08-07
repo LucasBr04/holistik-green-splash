@@ -136,9 +136,9 @@ const translations = {
       support: {
         title: 'accompagnement opérationnel',
         desc: 'management et conduite de projet dans l\'exécution de vos plans stratégiques.',
-        feature1: 'mise en œuvre',
+        feature1: 'mise en œuvre, planning et maîtrise des budgets',
         feature2: 'gestion de projet',
-        feature3: 'formation équipes'
+        feature3: 'coaching d\'équipes'
       },
       cta: 'en savoir plus',
       final: {
