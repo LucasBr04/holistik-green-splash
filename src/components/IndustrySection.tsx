@@ -37,6 +37,11 @@ const IndustrySection = ({ onContactClick }: IndustrySectionProps) => {
       icon: Briefcase,
       title: t('industry.4.title'),
       description: t('industry.4.description')
+    },
+    {
+      icon: Package,
+      title: t('industry.5.title'),
+      description: t('industry.5.description')
     }
   ];
 

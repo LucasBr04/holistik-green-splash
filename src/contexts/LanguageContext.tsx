@@ -209,6 +209,10 @@ const translations = {
         title: 'entrepreneurs et start-ups',
         description: 'mentoring et conseil stratégique pour entrepreneurs, structuration de business models, levées de fonds et accélération de croissance.'
       },
+      5: {
+        title: 'retail et channel management',
+        description: 'plans d\'amélioration de la performance, stratégie de transformation, approche omnichannel, développement de nouveaux concepts et création d\'expérience client.'
+      },
       cta: 'en savoir plus',
       ctaSection: {
         title: 'prêt à transformer votre secteur ?',
@@ -416,6 +420,10 @@ const translations = {
       4: {
         title: 'entrepreneurs and start-ups',
         description: 'mentoring and strategic consulting for entrepreneurs, business model structuring, fundraising and growth acceleration.'
+      },
+      5: {
+        title: 'retail and channel management',
+        description: 'performance improvement plans, transformation strategy, omnichannel approach, new concept development and customer experience creation.'
       },
       cta: 'learn more',
       ctaSection: {
