@@ -65,7 +65,7 @@ const translations = {
     },
     aboutPage: {
       hero: {
-        title: 'je vis pleinement l\'aventure, tant sur le plan professionnel que personnel',
+        title: 'vivre pleinement l\'aventure, tant sur le plan personnel que professionnel.',
         subtitle: 'plus de 25 ans d\'expérience en management international, de la stratégie de marque à l\'exécution opérationnelle'
       },
       experience: {
