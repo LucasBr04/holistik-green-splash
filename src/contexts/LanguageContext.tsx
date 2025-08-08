@@ -66,7 +66,7 @@ const translations = {
     aboutPage: {
       hero: {
         title: 'transformer le potentiel en performance et vivre pleinement l\'aventure.',
-        subtitle: 'plus de 25 ans d\'expérience en management d\'équipes et de centre de profit au service de marques globales, de la stratégie à l\'exécution opérationnelle'
+        subtitle: 'plus de 25 ans d\'expérience en management d\'équipes, construction de marques, développement commercial et gestion de centres de profit, au service d\'entreprises internationales et locales'
       },
       experience: {
         title: 'un parcours international et multi-sectoriel riche d\'enseignements',
