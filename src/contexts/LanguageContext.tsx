@@ -65,7 +65,7 @@ const translations = {
     },
     aboutPage: {
       hero: {
-        title: 'vivre pleinement l\'aventure, tant sur le plan personnel que professionnel.',
+        title: 'transformer le potentiel en performance et vivre pleinement l\'aventure.',
         subtitle: 'plus de 25 ans d\'expérience en management d\'équipes et de centre de profit au service de marques globales, de la stratégie à l\'exécution opérationnelle'
       },
       experience: {
