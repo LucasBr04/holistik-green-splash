@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   console.log('App component is rendering');
-  
+
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
